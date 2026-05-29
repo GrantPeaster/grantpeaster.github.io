@@ -1,0 +1,21 @@
+/* Change font */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Change font size */
+p {
+  font-size: 16px;
+}
+
+/* Change color */
+p {
+  color: #333333;
+}
+
+/* For headings */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #0066cc;
+  font-size: 24px;
+}
