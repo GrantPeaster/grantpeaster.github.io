@@ -39,7 +39,7 @@
     <a href="#about" class="btn-primary learn-more-btn">Learn More</a>
   </header>
 
-  <!-- ABOUT + ELEVATOR PITCH -->
+  <!-- ABOUT SECTION -->
   <section id="about" class="section about-section">
     <div class="about-wrapper">
 
@@ -63,8 +63,13 @@
         </p>
       </div>
 
-      <!-- Sweeping graphic -->
-      <img src="assets/img/Webgraphics.png" alt="" class="sweep-graphic">
+      <!-- ANIMATED SWOOSH SVG -->
+      <svg class="gci-swoosh" viewBox="0 0 600 200" fill="none" stroke="#B18750" stroke-width="6" stroke-linecap="round">
+        <path class="swoosh-line" d="M20 150 C120 80, 260 80, 380 150" />
+        <path class="swoosh-line" d="M40 130 C160 60, 300 60, 420 130" />
+        <path class="swoosh-line" d="M60 110 C200 40, 340 40, 460 110" />
+        <path class="swoosh-line" d="M80 90 C240 20, 380 20, 500 90" />
+      </svg>
 
     </div>
   </section>
@@ -81,40 +86,6 @@
       </form>
     </div>
   </section>
-
-  <!-- SMOOTH SCROLL FOR HERO BUTTON -->
-  <script>
-    const learnMoreBtn = document.querySelector('.learn-more-btn');
-    if (learnMoreBtn) {
-      learnMoreBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector('#about').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    }
-  </script>
-
-  <!-- SWEEP ANIMATION SCRIPT -->
-  <script>
-    const sweep = document.querySelector('.sweep-graphic');
-
-    function revealSweep() {
-      if (!sweep) return;
-      const rect = sweep.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        sweep.style.opacity = "1";
-        sweep.style.transform = "translateY(0)";
-      }
-    }
-
-    window.addEventListener('scroll', revealSweep);
-    revealSweep();
-  </script>
-
-</body>
-</html>
 
 
 
