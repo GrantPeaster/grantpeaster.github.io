@@ -7,6 +7,18 @@ html {
 }
 
 /* ================================
+   LOAD SOLOMON SANS FONT
+================================== */
+
+@font-face {
+  font-family: "Solomon Sans";
+  src: url("../fonts/SolomonSans-Regular.woff2") format("woff2"),
+       url("../fonts/SolomonSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ================================
    GEORGIA CIVIL BRAND VARIABLES
 ================================== */
 
@@ -202,6 +214,7 @@ input, textarea {
   color: var(--gc-blue);
   margin-bottom: 10px;
 }
+
 
 
 
