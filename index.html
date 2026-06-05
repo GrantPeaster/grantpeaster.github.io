@@ -63,53 +63,28 @@
         </p>
       </div>
 
-<svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
+      <!-- FINAL TRACED + TALLER HILLS SVG (BEHIND THE BOX) -->
+      <svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
 
-  <!-- Bottom contour -->
-  <path class="swoosh-line" stroke-width="5"
-        d="M0 210
-           C80 190, 140 215, 210 205
-           S330 225, 410 215
-           S520 240, 600 225" />
+        <path class="swoosh-line" stroke-width="5"
+              d="M0 215 C90 185, 160 235, 240 210 S360 245, 450 225 S560 255, 600 235" />
 
-  <!-- Lower contour -->
-  <path class="swoosh-line" stroke-width="4.5"
-        d="M20 190
-           C95 170, 155 195, 225 185
-           S345 205, 430 195
-           S530 220, 585 210" />
+        <path class="swoosh-line" stroke-width="4.5"
+              d="M20 195 C110 170, 175 210, 255 190 S370 220, 455 205 S545 235, 585 220" />
 
-  <!-- Mid-lower contour -->
-  <path class="swoosh-line" stroke-width="4"
-        d="M40 172
-           C110 155, 170 175, 245 165
-           S360 185, 445 178
-           S525 205, 570 198" />
+        <path class="swoosh-line" stroke-width="4"
+              d="M40 175 C130 155, 195 185, 275 170 S380 200, 460 190 S530 215, 570 205" />
 
-  <!-- Middle contour -->
-  <path class="swoosh-line" stroke-width="3.5"
-        d="M60 154
-           C125 140, 185 158, 265 150
-           S380 170, 460 165
-           S515 190, 555 185" />
+        <path class="swoosh-line" stroke-width="3.5"
+              d="M60 155 C150 140, 215 165, 295 155 S395 185, 470 178 S515 200, 555 190" />
 
-  <!-- Upper-mid contour -->
-  <path class="swoosh-line" stroke-width="3"
-        d="M80 136
-           C145 125, 205 140, 285 135
-           S395 160, 470 155
-           S505 178, 540 172" />
+        <path class="swoosh-line" stroke-width="3"
+              d="M80 138 C165 125, 235 145, 315 138 S405 165, 475 160 S505 180, 540 172" />
 
-  <!-- Top contour -->
-  <path class="swoosh-line" stroke-width="2.7"
-        d="M105 120
-           C165 112, 225 125, 305 122
-           S410 150, 480 148
-           S500 165, 520 160" />
+        <path class="swoosh-line" stroke-width="2.7"
+              d="M105 122 C185 112, 255 128, 330 125 S415 150, 485 148 S505 165, 520 160" />
 
-</svg>
-
-
+      </svg>
 
     </div>
   </section>
@@ -127,7 +102,7 @@
     </div>
   </section>
 
-  <!-- SMOOTH SCROLL FOR HERO BUTTON -->
+  <!-- SMOOTH SCROLL -->
   <script>
     const learnMoreBtn = document.querySelector('.learn-more-btn');
     if (learnMoreBtn) {
@@ -141,32 +116,23 @@
     }
   </script>
 
-  <!-- SWOOSH ANIMATION (PAGE LOAD TRIGGER) -->
+  <!-- SWOOSH ANIMATION -->
   <script>
-    const swoosh = document.querySelector('.gci-swoosh');
     const swooshLines = document.querySelectorAll('.swoosh-line');
 
-    // Measure each path and set its stroke length
     swooshLines.forEach(line => {
       const length = line.getTotalLength();
       line.style.setProperty('--len', length);
     });
 
-    // Trigger animation after load
-    function startSwoosh() {
-      if (!swoosh) return;
-      swoosh.classList.add('animate');
-      swoosh.style.opacity = "1";
-      swoosh.style.transform = "translateY(0)";
-    }
-
     window.addEventListener('load', () => {
-      setTimeout(startSwoosh, 400);
+      document.querySelector('.gci-swoosh').classList.add('animate');
     });
   </script>
 
 </body>
 </html>
+
 
 
 
