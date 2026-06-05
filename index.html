@@ -12,10 +12,34 @@
 
 <body>
 
-  <!-- NAV + HERO (unchanged) -->
-  <!-- ... your existing nav + hero code stays exactly the same ... -->
+  <!-- TOP NAVIGATION BAR -->
+  <div class="top-nav">
+    <ul>
+      <li><a href="#why">WHY GCI</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+    </ul>
+  </div>
 
-  <!-- ABOUT SECTION -->
+  <!-- MAIN NAVIGATION WITH LOGO -->
+  <nav>
+    <img src="assets/img/download.png" alt="Georgia Civil Logo" class="logo">
+    <ul>
+      <li><a href="#civil">Civil Engineering</a></li>
+      <li><a href="#landscape">Landscape Architecture</a></li>
+      <li><a href="#survey">Land Surveying</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="assets/img/SecondaryLogoGCI.png" class="hero-logo" alt="Georgia Civil Logo">
+    <h1>Your Complete Project Partner</h1>
+    <p>Growing, Creating, Innovating</p>
+    <a href="#about" class="btn-primary learn-more-btn">Learn More</a>
+  </header>
+
+  <!-- ABOUT + ELEVATOR PITCH -->
   <section id="about" class="section about-section">
     <div class="about-wrapper">
 
@@ -40,16 +64,44 @@
       </div>
 
       <!-- Sweeping graphic -->
-      <img src="assets/img/Webgraphics.png" alt="" class="sweep-graphic">
+      <img src="assets/img/swoosh.png" alt="" class="sweep-graphic">
 
     </div>
   </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn-secondary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SMOOTH SCROLL FOR HERO BUTTON -->
+  <script>
+    const learnMoreBtn = document.querySelector('.learn-more-btn');
+    if (learnMoreBtn) {
+      learnMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#about').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+  </script>
 
   <!-- SWEEP ANIMATION SCRIPT -->
   <script>
     const sweep = document.querySelector('.sweep-graphic');
 
     function revealSweep() {
+      if (!sweep) return;
       const rect = sweep.getBoundingClientRect();
       if (rect.top < window.innerHeight - 100) {
         sweep.style.opacity = "1";
@@ -63,6 +115,7 @@
 
 </body>
 </html>
+
 
 
 
