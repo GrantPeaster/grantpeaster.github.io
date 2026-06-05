@@ -64,29 +64,46 @@
       </div>
 
       <!-- EXACT-MATCH CONTOUR SWOOSH -->
-      <svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
+    <svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
 
-        <!-- Bottom contour -->
-        <path class="swoosh-line" stroke-width="5"
-              d="M0 210 C120 190, 260 205, 390 225 S560 250, 600 230" />
+  <!-- 1. Bottom contour (widest, flattest) -->
+  <path class="swoosh-line" stroke-width="5"
+        d="M0 210
+           C 90 195, 190 200, 285 215
+           S 430 240, 600 230" />
 
-        <!-- Lower-mid contour -->
-        <path class="swoosh-line" stroke-width="4.5"
-              d="M20 185 C150 165, 290 175, 420 205 S560 230, 590 215" />
+  <!-- 2. Lower contour -->
+  <path class="swoosh-line" stroke-width="4.5"
+        d="M20 190
+           C 110 175, 205 180, 295 198
+           S 430 220, 585 212" />
 
-        <!-- Middle contour -->
-        <path class="swoosh-line" stroke-width="4"
-              d="M40 160 C180 135, 320 150, 450 185 S545 210, 580 200" />
+  <!-- 3. Mid-lower contour -->
+  <path class="swoosh-line" stroke-width="4"
+        d="M40 172
+           C 125 158, 215 162, 305 180
+           S 430 205, 570 198" />
 
-        <!-- Upper-mid contour -->
-        <path class="swoosh-line" stroke-width="3.5"
-              d="M70 135 C210 110, 350 125, 480 165 S535 195, 565 185" />
+  <!-- 4. Middle contour -->
+  <path class="swoosh-line" stroke-width="3.5"
+        d="M60 154
+           C 140 140, 225 145, 315 162
+           S 430 190, 555 185" />
 
-        <!-- Top contour -->
-        <path class="swoosh-line" stroke-width="3"
-              d="M100 110 C245 85, 380 100, 505 145 S525 180, 555 170" />
+  <!-- 5. Upper-mid contour -->
+  <path class="swoosh-line" stroke-width="3"
+        d="M80 136
+           C 155 123, 235 128, 325 145
+           S 430 178, 540 172" />
 
-      </svg>
+  <!-- 6. Top contour (shortest, tightest) -->
+  <path class="swoosh-line" stroke-width="2.7"
+        d="M105 120
+           C 175 110, 245 115, 335 130
+           S 430 165, 520 160" />
+
+</svg>
+
 
     </div>
   </section>
