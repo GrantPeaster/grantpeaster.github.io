@@ -1,19 +1,102 @@
+/* ================================
+   GEORGIA CIVIL BRAND VARIABLES
+================================== */
+
+:root {
+  --gc-red: #CA2131;
+  --gc-brass: #B18750;
+  --gc-blue: #020534;
+  --gc-gray: #787878;
+  --gc-white: #FFFFFF;
+  --gc-black: #000000;
+
+  --font-body: "Solomon Sans", sans-serif;
+  --font-heading: "Times New Roman MT Condensed", serif;
+  --font-nav: "Roboto", sans-serif;
+}
+
+/* ================================
+   TYPOGRAPHY
+================================== */
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-body);
+  color: var(--gc-black);
+  background: var(--gc-white);
+  line-height: 1.6;
 }
 
-p {
-  color: #333333;
+h1, h2 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
 }
 
-h1 {
-  text-align: center;
-  color: blue;
-  font-size: 32px;
+nav a, .service-category {
+  font-family: var(--font-nav);
+  text-transform: uppercase;
+  letter-spacing: 0.139em; /* matches “letter spacing: 139” */
 }
 
-h2 {
-  text-align: center;
-  color: red;
+/* ================================
+   LINKS
+================================== */
+
+a {
+  color: var(--gc-blue);
+  text-decoration: none;
 }
+
+a:hover {
+  color: var(--gc-red);
+}
+
+a:active {
+  color: var(--gc-brass);
+}
+
+/* ================================
+   BUTTONS
+================================== */
+
+.btn-primary {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-secondary {
+  background: var(--gc-red);
+  color: var(--gc-white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ================================
+   FORMS
+================================== */
+
+input, textarea {
+  border: 1px solid var(--gc-gray);
+  border-radius: 8px; /* “soft, rounded corners” */
+  padding: 10px;
+  font-family: var(--font-body);
+}
+
+/* ================================
+   UTILITY
+================================== */
+
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
