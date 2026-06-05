@@ -1,4 +1,12 @@
 /* ================================
+   GLOBAL SMOOTH SCROLLING
+================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
    GEORGIA CIVIL BRAND VARIABLES
 ================================== */
 
@@ -13,11 +21,6 @@
   --font-body: "Solomon Sans", sans-serif;
   --font-heading: "Times New Roman MT Condensed", serif;
   --font-nav: "Roboto", sans-serif;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* ================================
@@ -105,11 +108,11 @@ nav a:hover {
 ================================== */
 
 .logo {
-  height: 50px; /* smaller nav logo */
+  height: 50px;
 }
 
 .hero-logo {
-  height: 70px; /* significantly smaller hero logo */
+  height: 70px;
   margin-bottom: 20px;
 }
 
@@ -199,5 +202,6 @@ input, textarea {
   color: var(--gc-blue);
   margin-bottom: 10px;
 }
+
 
 
