@@ -183,14 +183,20 @@ nav a:hover {
 ============================================ */
 .gci-swoosh {
   position: absolute;
-  bottom: -60px;
+  bottom: -40px; /* moves hills upward behind the box */
   left: 50%;
-  transform: translateX(-50%);
-  width: 110%;
+  transform: translateX(-50%) scale(1.45); /* makes hills larger */
+  width: 140%; /* extends hills beyond both sides */
   opacity: 0;
-  z-index: 1;
+  z-index: 1; /* behind box, above background */
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
+
+.gci-swoosh.animate {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1.45);
+}
+
 
 .gci-swoosh.animate {
   opacity: 1;
