@@ -15,6 +15,11 @@
   --font-nav: "Roboto", sans-serif;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================================
    GLOBAL TYPOGRAPHY
 ================================== */
@@ -104,7 +109,7 @@ nav a:hover {
 }
 
 .hero-logo {
-  height: 70px; /* SIGNIFICANTLY smaller hero logo */
+  height: 70px; /* significantly smaller hero logo */
   margin-bottom: 20px;
 }
 
@@ -124,11 +129,12 @@ nav a:hover {
 ================================== */
 
 .btn-primary {
-  background: var(--gc-blue);
+  background: var(--gc-red);
   color: var(--gc-white);
   padding: 12px 24px;
   border-radius: 6px;
   border: none;
+  display: inline-block;
 }
 
 .btn-secondary {
@@ -140,23 +146,6 @@ nav a:hover {
 }
 
 /* ================================
-   LINKS
-================================== */
-
-a {
-  color: var(--gc-blue);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--gc-red);
-}
-
-a:active {
-  color: var(--gc-brass);
-}
-
-/* ================================
    FORMS
 ================================== */
 
@@ -165,6 +154,8 @@ input, textarea {
   border-radius: 8px;
   padding: 10px;
   font-family: var(--font-body);
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 /* ================================
@@ -179,6 +170,22 @@ input, textarea {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+
+/* ================================
+   ABOUT / ELEVATOR PITCH
+================================== */
+
+.about-section {
+  background: var(--gc-gray);
+  color: var(--gc-white);
+}
+
+.elevator-pitch {
+  max-width: 700px;
+  margin: 20px auto 40px;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 /* ================================
