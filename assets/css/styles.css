@@ -60,7 +60,7 @@ body {
 }
 
 /* ================================
-   MAIN NAVIGATION (LOGO + LINKS)
+   MAIN NAVIGATION
 ================================== */
 
 nav {
@@ -185,7 +185,7 @@ nav a:hover {
   color: var(--gc-brass);
 }
 
-/* BOX BEHIND TEXT */
+/* GLASS BOX */
 .about-box {
   background: rgba(255, 255, 255, 0.08);
   padding: 50px;
@@ -206,15 +206,46 @@ nav a:hover {
   color: var(--gc-brass);
 }
 
-/* SWEEP GRAPHIC */
-.sweep-graphic {
+/* ================================
+   ANIMATED SWOOSH
+================================== */
+
+.gci-swoosh {
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 40px auto 0;
+  display: block;
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.9s ease-out;
-  display: block;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.swoosh-line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: none;
+}
+
+.gci-swoosh.animate .swoosh-line {
+  animation: draw 1.6s ease-out forwards;
+}
+
+.gci-swoosh.animate .swoosh-line:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.gci-swoosh.animate .swoosh-line:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.gci-swoosh.animate .swoosh-line:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* ================================
@@ -253,6 +284,7 @@ textarea {
 textarea {
   min-height: 120px;
 }
+
 
 
 
