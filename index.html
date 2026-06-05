@@ -87,6 +87,53 @@
     </div>
   </section>
 
+  <!-- SMOOTH SCROLL FOR HERO BUTTON -->
+  <script>
+    const learnMoreBtn = document.querySelector('.learn-more-btn');
+    if (learnMoreBtn) {
+      learnMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#about').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+  </script>
+
+  <!-- SWOOSH SCROLL-TRIGGER ANIMATION -->
+  <script>
+    const swoosh = document.querySelector('.gci-swoosh');
+
+    function revealSwoosh() {
+      if (!swoosh) return;
+      const rect = swoosh.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        if (!swoosh.classList.contains('animate')) {
+          swoosh.classList.add('animate');
+          swoosh.style.opacity = "1";
+          swoosh.style.transform = "translateY(0)";
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealSwoosh);
+    revealSwoosh();
+  </script>
+
+  <!-- DYNAMIC PATH LENGTH FIX -->
+  <script>
+    const swooshLines = document.querySelectorAll('.swoosh-line');
+
+    swooshLines.forEach(line => {
+      const length = line.getTotalLength();
+      line.style.setProperty('--len', length);
+    });
+  </script>
+
+</body>
+</html>
+
 
 
 
