@@ -63,31 +63,30 @@
         </p>
       </div>
 
-      <!-- ANIMATED SWOOSH SVG -->
-<svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
-  <!-- lowest, broadest line -->
-  <path class="swoosh-line" stroke-width="5"
-        d="M10 210 C120 190, 260 200, 410 225 S560 245, 590 230" />
+      <!-- EXACT-MATCH CONTOUR SWOOSH -->
+      <svg class="gci-swoosh" viewBox="0 0 600 260" fill="none" stroke="#B18750" stroke-linecap="round">
 
-  <!-- slightly higher, tighter curve -->
-  <path class="swoosh-line" stroke-width="4.5"
-        d="M25 190 C140 165, 280 175, 420 200 S555 220, 585 210" />
+        <!-- Bottom contour -->
+        <path class="swoosh-line" stroke-width="5"
+              d="M0 210 C120 190, 260 205, 390 225 S560 250, 600 230" />
 
-  <!-- mid contour, more bend -->
-  <path class="swoosh-line" stroke-width="4"
-        d="M45 170 C155 145, 305 150, 435 180 S545 205, 575 195" />
+        <!-- Lower-mid contour -->
+        <path class="swoosh-line" stroke-width="4.5"
+              d="M20 185 C150 165, 290 175, 420 205 S560 230, 590 215" />
 
-  <!-- upper contour, more irregular -->
-  <path class="swoosh-line" stroke-width="3.5"
-        d="M70 145 C175 120, 320 125, 450 155 S535 190, 565 180" />
+        <!-- Middle contour -->
+        <path class="swoosh-line" stroke-width="4"
+              d="M40 160 C180 135, 320 150, 450 185 S545 210, 580 200" />
 
-  <!-- highest, lightest line -->
-  <path class="swoosh-line" stroke-width="3"
-        d="M95 120 C195 95, 335 100, 465 130 S525 175, 555 165" />
-</svg>
+        <!-- Upper-mid contour -->
+        <path class="swoosh-line" stroke-width="3.5"
+              d="M70 135 C210 110, 350 125, 480 165 S535 195, 565 185" />
 
+        <!-- Top contour -->
+        <path class="swoosh-line" stroke-width="3"
+              d="M100 110 C245 85, 380 100, 505 145 S525 180, 555 170" />
 
-
+      </svg>
 
     </div>
   </section>
@@ -119,38 +118,33 @@
     }
   </script>
 
-  <!-- SWOOSH SCROLL-TRIGGER ANIMATION -->
+  <!-- SWOOSH ANIMATION (PAGE LOAD TRIGGER) -->
   <script>
     const swoosh = document.querySelector('.gci-swoosh');
-
-    function revealSwoosh() {
-      if (!swoosh) return;
-      const rect = swoosh.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        if (!swoosh.classList.contains('animate')) {
-          swoosh.classList.add('animate');
-          swoosh.style.opacity = "1";
-          swoosh.style.transform = "translateY(0)";
-        }
-      }
-    }
-
-    window.addEventListener('scroll', revealSwoosh);
-    revealSwoosh();
-  </script>
-
-  <!-- DYNAMIC PATH LENGTH FIX -->
-  <script>
     const swooshLines = document.querySelectorAll('.swoosh-line');
 
+    // Measure each path and set its stroke length
     swooshLines.forEach(line => {
       const length = line.getTotalLength();
       line.style.setProperty('--len', length);
+    });
+
+    // Trigger animation after load
+    function startSwoosh() {
+      if (!swoosh) return;
+      swoosh.classList.add('animate');
+      swoosh.style.opacity = "1";
+      swoosh.style.transform = "translateY(0)";
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(startSwoosh, 400);
     });
   </script>
 
 </body>
 </html>
+
 
 
 
