@@ -58,21 +58,8 @@ a:active {
    BUTTONS
 ================================== */
 
-.btn-primary {
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-}
 
-.btn-secondary {
-  background: var(--gc-red);
-  color: var(--gc-white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-}
+
 
 /* ================================
    FORMS
@@ -100,6 +87,44 @@ input, textarea {
 }
 .logo {
   height: 60px;
+}
+nav {
+  background: var(--gc-blue);
+  padding: 20px;
+}
+nav a {
+  color: var(--gc-white);
+}
+nav a:hover {
+  color: var(--gc-red);
+}
+.btn-primary {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+}
+
+.btn-secondary {
+  background: var(--gc-red);
+  color: var(--gc-white);
+}
+a:hover {
+  color: var(--gc-red);
+}
+a:active {
+  color: var(--gc-brass);
+}
+.hero {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  padding: 100px 20px;
+  text-align: center;
+}
+.service-category {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.139em;
+  color: var(--gc-blue);
+  margin-bottom: 10px;
 }
 
 
