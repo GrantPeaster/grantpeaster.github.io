@@ -221,8 +221,8 @@ nav a:hover {
 }
 
 .swoosh-line {
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
   animation: none;
 }
 
