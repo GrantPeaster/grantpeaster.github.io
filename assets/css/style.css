@@ -16,7 +16,7 @@
 }
 
 /* ================================
-   TYPOGRAPHY
+   GLOBAL TYPOGRAPHY
 ================================== */
 
 body {
@@ -31,27 +31,91 @@ h1, h2 {
   letter-spacing: 0.5px;
 }
 
-nav a, .service-category {
+nav a, .service-category, .top-nav a {
   font-family: var(--font-nav);
   text-transform: uppercase;
   letter-spacing: 0.139em;
 }
 
 /* ================================
-   LINKS
+   TOP NAVIGATION BAR
 ================================== */
 
-a {
-  color: var(--gc-blue);
-  text-decoration: none;
+.top-nav {
+  background: var(--gc-blue);
+  padding: 12px 0;
 }
 
-a:hover {
+.top-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav a {
+  color: var(--gc-white);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.top-nav a:hover {
   color: var(--gc-red);
 }
 
-a:active {
-  color: var(--gc-brass);
+/* ================================
+   MAIN NAVIGATION (LOGO + LINKS)
+================================== */
+
+nav {
+  background: var(--gc-blue);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--gc-white);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--gc-red);
+}
+
+/* ================================
+   LOGOS
+================================== */
+
+.logo {
+  height: 60px;
+}
+
+.hero-logo {
+  height: 120px; /* smaller hero logo */
+  margin-bottom: 20px;
+}
+
+/* ================================
+   HERO SECTION
+================================== */
+
+.hero {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  padding: 100px 20px;
+  text-align: center;
 }
 
 /* ================================
@@ -69,89 +133,5 @@ a:active {
 .btn-secondary {
   background: var(--gc-red);
   color: var(--gc-white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-}
-
-/* ================================
-   FORMS
-================================== */
-
-input, textarea {
-  border: 1px solid var(--gc-gray);
-  border-radius: 8px;
-  padding: 10px;
-  font-family: var(--font-body);
-}
-
-/* ================================
-   UTILITY
-================================== */
-
-.section {
-  padding: 80px 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  height: 60px;
-}
-
-/* ================================
-   NAVIGATION
-================================== */
-
-nav {
-  background: var(--gc-blue);
-  padding: 20px;
-}
-
-nav a {
-  color: var(--gc-white);
-}
-
-nav a:hover {
-  color: var(--gc-red);
-}
-
-/* ================================
-   HERO
-================================== */
-
-.hero {
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* ================================
-   SERVICE CATEGORIES
-================================== */
-
-.service-category {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.139em;
-  color: var(--gc-blue);
-  margin-bottom: 10px;
-}
-
-/* ================================
-   HEADER + NAV COLOR
-================================== */
-
-header, nav {
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  padding: 20px;
-}
-
-
+  padding
 
