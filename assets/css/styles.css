@@ -1,14 +1,10 @@
 /* ================================
-   GLOBAL SMOOTH SCROLLING
+   GLOBAL
 ================================== */
 
 html {
   scroll-behavior: smooth;
 }
-
-/* ================================
-   GEORGIA CIVIL BRAND VARIABLES
-================================== */
 
 :root {
   --gc-red: #CA2131;
@@ -23,20 +19,12 @@ html {
   --font-nav: "Montserrat", sans-serif;
 }
 
-/* ================================
-   GLOBAL TYPOGRAPHY
-================================== */
-
 body {
   font-family: var(--font-body);
   background: var(--gc-white);
   color: var(--gc-black);
   line-height: 1.6;
-}
-
-h1, h2 {
-  font-family: var(--font-heading);
-  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 /* ================================
@@ -127,38 +115,37 @@ nav a:hover {
   text-align: center;
 }
 
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
 /* ================================
    BUTTONS
 ================================== */
 
-.btn-primary {
-  background: var(--gc-red);
-  color: var(--gc-white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-  display: inline-block;
-}
-
+.btn-primary,
 .btn-secondary {
   background: var(--gc-red);
   color: var(--gc-white);
   padding: 12px 24px;
   border-radius: 6px;
   border: none;
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-body);
+  cursor: pointer;
 }
 
-/* ================================
-   FORMS
-================================== */
-
-input, textarea {
-  border: 1px solid var(--gc-gray);
-  border-radius: 8px;
-  padding: 10px;
-  font-family: var(--font-body);
-  width: 100%;
-  margin-bottom: 15px;
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #a51b28;
 }
 
 /* ================================
@@ -166,7 +153,7 @@ input, textarea {
 ================================== */
 
 .section {
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .container {
@@ -176,31 +163,95 @@ input, textarea {
 }
 
 /* ================================
-   ABOUT / ELEVATOR PITCH
+   ABOUT SECTION
 ================================== */
 
 .about-section {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+}
+
+.about-wrapper {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.about-wrapper h2 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: var(--gc-brass);
+}
+
+/* BOX BEHIND TEXT */
+.about-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 50px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 60px;
+}
+
+.about-box p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin-bottom: 25px;
+}
+
+.gci-tagline {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gc-brass);
+}
+
+/* SWEEP GRAPHIC */
+.sweep-graphic {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+  display: block;
+}
+
+/* ================================
+   CONTACT SECTION
+================================== */
+
+.contact-section {
   background: var(--gc-gray);
   color: var(--gc-white);
 }
 
-.elevator-pitch {
-  max-width: 700px;
-  margin: 20px auto 40px;
-  font-size: 1.2rem;
-  line-height: 1.7;
+.contact-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-/* ================================
-   SERVICE CATEGORY STYLING
-================================== */
+form {
+  max-width: 600px;
+  margin: auto;
+}
 
-.service-category {
-  font-family: var(--font-nav);
-  text-transform: uppercase;
-  letter-spacing: 0.139em;
-  color: var(--gc-blue);
-  margin-bottom: 10px;
+input,
+textarea {
+  border: 1px solid var(--gc-white);
+  border-radius: 8px;
+  padding: 10px;
+  font-family: var(--font-body);
+  width: 100%;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--gc-white);
+}
+
+textarea {
+  min-height: 120px;
 }
 
 
