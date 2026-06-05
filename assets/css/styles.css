@@ -1,11 +1,6 @@
-/* ================================
-   GLOBAL
-================================== */
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* ============================================
+   GEORGIA CIVIL BRAND VARIABLES
+============================================ */
 :root {
   --gc-red: #CA2131;
   --gc-brass: #B18750;
@@ -16,67 +11,87 @@ html {
 
   --font-body: "Montserrat", sans-serif;
   --font-heading: "Times New Roman MT Condensed", serif;
-  --font-nav: "Montserrat", sans-serif;
+  --font-nav: "Roboto", sans-serif;
 }
 
+/* ============================================
+   GLOBAL
+============================================ */
 body {
-  font-family: var(--font-body);
-  background: var(--gc-white);
-  color: var(--gc-black);
-  line-height: 1.6;
   margin: 0;
+  font-family: var(--font-body);
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  scroll-behavior: smooth;
 }
 
-/* ================================
-   TOP NAVIGATION BAR
-================================== */
+.section {
+  padding: 80px 20px;
+}
 
+h1, h2 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   TOP NAV BAR (WHY GCI / SERVICES / PORTFOLIO)
+============================================ */
 .top-nav {
   background: var(--gc-blue);
-  padding: 14px 0;
-  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .top-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.top-nav li {
+  display: inline-block;
+  margin: 0 20px;
 }
 
 .top-nav a {
   font-family: var(--font-nav);
   text-transform: uppercase;
   letter-spacing: 0.139em;
-  color: var(--gc-white);
+  color: var(--gc-brass);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .top-nav a:hover {
   color: var(--gc-red);
 }
 
-/* ================================
-   MAIN NAVIGATION
-================================== */
-
+/* ============================================
+   MAIN NAVIGATION (LOGO + 3 LINKS)
+============================================ */
 nav {
   background: var(--gc-blue);
   padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  height: 55px;
 }
 
 nav ul {
-  display: flex;
-  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 25px;
 }
 
 nav a {
@@ -85,162 +100,114 @@ nav a {
   letter-spacing: 0.139em;
   color: var(--gc-white);
   text-decoration: none;
+  font-size: 14px;
 }
 
 nav a:hover {
-  color: var(--gc-red);
+  color: var(--gc-brass);
 }
 
-/* ================================
-   LOGOS
-================================== */
-
-.logo {
-  height: 50px;
+/* ============================================
+   HERO
+============================================ */
+.hero {
+  text-align: center;
+  padding: 120px 20px 100px;
+  background: var(--gc-blue);
 }
 
 .hero-logo {
-  height: 70px;
+  height: 120px;
   margin-bottom: 20px;
 }
 
-/* ================================
-   HERO SECTION
-================================== */
-
-.hero {
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  padding: 100px 20px;
-  text-align: center;
-}
-
 .hero h1 {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 48px;
+  margin: 10px 0;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
-/* ================================
-   BUTTONS
-================================== */
-
-.btn-primary,
-.btn-secondary {
-  background: var(--gc-red);
-  color: var(--gc-white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-  display: inline-block;
-  text-decoration: none;
-  font-family: var(--font-body);
-  cursor: pointer;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-  background: #a51b28;
-}
-
-/* ================================
-   LAYOUT UTILITIES
-================================== */
-
-.section {
-  padding: 80px 20px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ================================
-   ABOUT SECTION
-================================== */
-
-.about-section {
+.btn-primary {
   background: var(--gc-blue);
   color: var(--gc-white);
+  border: 2px solid var(--gc-brass);
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gc-brass);
+  color: var(--gc-blue);
+}
+
+/* ============================================
+   ABOUT SECTION + BACKGROUND HILLS
+============================================ */
+.about-section {
+  position: relative;
+  overflow: visible;
+  background: var(--gc-blue);
 }
 
 .about-wrapper {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
-.about-wrapper h2 {
-  font-family: var(--font-heading);
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-  color: var(--gc-brass);
-}
-
-/* GLASS BOX */
 .about-box {
   background: rgba(255, 255, 255, 0.08);
-  padding: 50px;
-  border-radius: 14px;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 3;
   backdrop-filter: blur(6px);
-  margin-bottom: 60px;
-}
-
-.about-box p {
-  font-size: 1.25rem;
-  line-height: 1.75;
-  margin-bottom: 25px;
 }
 
 .gci-tagline {
+  margin-top: 20px;
   font-weight: 600;
-  letter-spacing: 0.08em;
   color: var(--gc-brass);
 }
 
-/* ================================
-   ANIMATED SWOOSH
-================================== */
-
+/* ============================================
+   ROLLING HILLS SVG (BEHIND ABOUT BOX)
+============================================ */
 .gci-swoosh {
-  width: 100%;
-  max-width: 700px;
-  margin: 40px auto 0;
-  display: block;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  z-index: 1;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.gci-swoosh.animate {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .swoosh-line {
   stroke-dasharray: var(--len);
   stroke-dashoffset: var(--len);
-  animation: none;
+  animation: draw 2.4s ease forwards;
 }
 
-.gci-swoosh.animate .swoosh-line {
-  animation: draw 1.6s ease-out forwards;
-}
-
-.gci-swoosh.animate .swoosh-line:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.gci-swoosh.animate .swoosh-line:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.gci-swoosh.animate .swoosh-line:nth-child(4) {
-  animation-delay: 0.45s;
-}
+.swoosh-line:nth-child(2) { animation-delay: 0.15s; }
+.swoosh-line:nth-child(3) { animation-delay: 0.3s; }
+.swoosh-line:nth-child(4) { animation-delay: 0.45s; }
+.swoosh-line:nth-child(5) { animation-delay: 0.6s; }
+.swoosh-line:nth-child(6) { animation-delay: 0.75s; }
 
 @keyframes draw {
   to {
@@ -248,42 +215,34 @@ nav a:hover {
   }
 }
 
-/* ================================
+/* ============================================
    CONTACT SECTION
-================================== */
-
-.contact-section {
-  background: var(--gc-gray);
-  color: var(--gc-white);
-}
-
-.contact-section h2 {
-  font-family: var(--font-heading);
-  font-size: 2.4rem;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-form {
-  max-width: 600px;
-  margin: auto;
-}
-
-input,
-textarea {
-  border: 1px solid var(--gc-white);
-  border-radius: 8px;
-  padding: 10px;
-  font-family: var(--font-body);
+============================================ */
+.contact-section input,
+.contact-section textarea {
   width: 100%;
+  padding: 12px;
   margin-bottom: 15px;
-  background: rgba(0, 0, 0, 0.1);
-  color: var(--gc-white);
+  border-radius: 8px;
+  border: 1px solid var(--gc-gray);
+  font-family: var(--font-body);
 }
 
-textarea {
-  min-height: 120px;
+.btn-secondary {
+  background: var(--gc-red);
+  color: var(--gc-white);
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
+
+.btn-secondary:hover {
+  background: var(--gc-brass);
+  color: var(--gc-blue);
+}
+
+
 
 
 
