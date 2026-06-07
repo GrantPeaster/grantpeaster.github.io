@@ -68,43 +68,70 @@ h1, h2 {
   color: var(--gc-red);
 }
 /* ===========================
-   FOOTER (Lovable Style)
+   FOOTER — Lovable Exact Layout
    =========================== */
 
 .gc-footer {
-  background: #020534; /* Dark blue */
+  background: #020534; /* dark blue */
   color: #ffffff;
-  text-align: center;
-  padding: 60px 20px;
+  padding: 24px 32px;
 }
 
-.gc-footer-logo {
-  height: 70px;
-  margin-bottom: 20px;
+.gc-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.gc-footer-tagline {
+/* Left: two small logos */
+.gc-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gc-footer-logo-main {
+  height: 32px;
+  width: auto;
+}
+
+.gc-footer-logo-secondary {
+  height: 28px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* Right: LEFT-ALIGNED text block */
+.gc-footer-right {
+  text-align: left; /* FIXED */
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.139em;
-  font-size: 0.85rem;
-  margin-bottom: 10px;
-  color: #b18750; /* Brass */
 }
 
 .gc-footer-location {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.139em;
   font-size: 0.75rem;
-  margin-bottom: 30px;
+  margin: 0 0 4px 0;
   color: #ffffff;
 }
 
-.gc-footer-mark {
-  height: 40px;
-  opacity: 0.8;
+.gc-footer-services {
+  font-size: 0.7rem;
+  margin: 0;
+  color: #b18750; /* brass */
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .gc-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 
 
 
