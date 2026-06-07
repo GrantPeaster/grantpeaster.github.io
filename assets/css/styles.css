@@ -67,6 +67,71 @@ h1, h2 {
 .top-nav a:hover {
   color: var(--gc-red);
 }
+/* ===========================
+   FOOTER
+   =========================== */
+
+.gc-footer {
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  padding: 60px 20px;
+  margin-top: 80px;
+}
+
+.gc-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gc-footer-logo {
+  height: 70px;
+  margin-bottom: 40px;
+}
+
+.gc-footer-columns {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.gc-footer-col h4 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.139em;
+  color: var(--gc-brass);
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.gc-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gc-footer-col li {
+  font-family: "Roboto", sans-serif;
+  color: var(--gc-white);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.gc-footer-bottom {
+  border-top: 1px solid var(--gc-brass);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.gc-footer-bottom p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.139em;
+  font-size: 0.75rem;
+  color: var(--gc-gray);
+}
 
 /* ============================================
    MAIN NAVIGATION (LOGO + 3 LINKS)
