@@ -242,8 +242,9 @@ nav a:hover {
 .gci-tagline {
   margin-top: 20px;
   font-weight: 600;
-  color: var(--gc-red);
+  color: var(--gc-red) !important;
 }
+
 
 /* ============================================
    ROLLING HILLS SVG (BEHIND ABOUT BOX)
