@@ -335,7 +335,7 @@ p {
   background: var(--gc-blue);
   color: var(--gc-white);
   text-align: center;
-  padding: 100px 32px 60px;
+  padding: 120px 32px 80px;
 }
 
 .gc-portfolio-hero h1 {
@@ -349,7 +349,6 @@ p {
   color: var(--gc-brass);
   letter-spacing: 0.12em;
 }
-
 
 /* INTRO */
 .gc-portfolio-intro {
@@ -375,7 +374,7 @@ p {
 /* GRID */
 .gc-portfolio-grid {
   max-width: 1200px;
-  margin: 0 auto 80px;
+  margin: 60px auto 120px;
   padding: 0 32px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -388,7 +387,6 @@ p {
   padding: 20px;
   border-radius: 6px;
   text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gc-project-card:hover {
