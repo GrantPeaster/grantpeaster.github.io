@@ -326,6 +326,36 @@ p {
     align-items: flex-start;
   }
 
+/* PORTFOLIO PAGE */
+.gc-portfolio-hero {
+  padding: 80px 32px 40px;
+  text-align: center;
+  background: #020534;
+  color: white;
+}
+
+.gc-portfolio-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.gc-portfolio-placeholder {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 32px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.gc-portfolio-placeholder h2 {
+  margin-bottom: 16px;
+  color: #020534;
+}
+
+.gc-portfolio-placeholder ul {
+  margin: 16px 0;
+  padding-left: 20px;
+}
 
 
 
