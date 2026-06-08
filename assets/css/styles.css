@@ -61,7 +61,7 @@ body.dark-bg {
 }
 
 .header-logo {
-  width: 180px;   /* FIXED SIZE */
+  width: 150px;
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -96,13 +96,13 @@ nav ul li a:hover {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 420px;
+  height: 360px; /* reduced from 420 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 40px 20px; /* reduced padding */
 }
 
 .hero-carousel {
@@ -223,21 +223,16 @@ nav ul li a:hover {
   gap: 40px;
 }
 
-.gc-footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .gc-footer-logo-main {
-  width: 200px;
+  width: 160px;
   height: auto;
 }
 
 .gc-footer-logo-secondary {
-  width: 140px;
+  width: 120px;
   height: auto;
 }
+
 
 .gc-footer-right {
   text-align: right;
