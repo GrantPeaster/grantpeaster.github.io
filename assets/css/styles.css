@@ -1,30 +1,27 @@
 /* =========================================
-   GEORGIA CIVIL — BRAND VARIABLES
+   BRAND VARIABLES
    ========================================= */
 :root {
   --gc-blue: #020534;
   --gc-red: #C8102E;
   --gc-brass: #b18750;
   --gc-white: #ffffff;
-  --gc-gray: #d1d1d1;
   --gc-black: #000000;
 
   --font-main: "Roboto", sans-serif;
 }
 
-/* =========================================
-   GLOBAL RESET
-   ========================================= */
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body.dark-bg {
+  background: var(--gc-blue);
+  color: var(--gc-white);
   font-family: var(--font-main);
-  color: var(--gc-black);
-  background: var(--gc-white);
   line-height: 1.6;
 }
 
@@ -33,22 +30,20 @@ body {
 }
 
 /* =========================================
-   NAVIGATION
+   HEADER
    ========================================= */
-nav {
+.site-header {
   width: 100%;
   padding: 20px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--gc-white);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: var(--gc-blue);
+  border-bottom: 1px solid var(--gc-brass);
 }
 
-nav img {
-  height: 40px;
+.header-logo {
+  height: 50px;
 }
 
 nav ul {
@@ -59,58 +54,54 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--gc-black);
+  color: var(--gc-white);
   font-weight: 600;
   letter-spacing: 0.08em;
 }
 
+nav ul li a.active {
+  color: var(--gc-brass);
+}
+
 /* =========================================
-   HERO SECTION
+   HERO
    ========================================= */
-.hero {
-  padding: 120px 20px;
+.hero,
+.hero-small {
   text-align: center;
-  background: var(--gc-white);
+  padding: 100px 20px 60px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.company-title {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: var(--gc-white);
 }
 
-.hero p {
+.company-slogan {
   font-size: 1.2rem;
-  color: var(--gc-black);
+  color: var(--gc-brass);
+  margin-top: 10px;
 }
 
 /* =========================================
    ABOUT SECTION
    ========================================= */
-.about-section {
-  background: var(--gc-white);
-}
-
 .about-wrapper {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+.gold-text {
+  color: var(--gc-brass);
 }
 
 .about-box p {
   margin-bottom: 18px;
   font-size: 1.05rem;
-  color: var(--gc-black);
 }
 
-/* =========================================
-   TAGLINE — SCROLL TRIGGERED ANIMATION
-   ========================================= */
+/* TAGLINE ANIMATION */
 .gci-tagline {
   margin-top: 20px;
   font-weight: 600;
@@ -126,21 +117,21 @@ nav ul li a {
 }
 
 /* =========================================
-   FOOTER — LOVABLE STYLE
+   FOOTER
    ========================================= */
 .gc-footer {
   background: var(--gc-blue);
   color: var(--gc-white);
   padding: 24px 32px;
+  border-top: 1px solid var(--gc-brass);
 }
 
 .gc-footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  align-items: center;
 }
 
 .gc-footer-left {
@@ -151,39 +142,26 @@ nav ul li a {
 
 .gc-footer-logo-main {
   height: 32px;
-  width: auto;
 }
 
 .gc-footer-logo-secondary {
   height: 28px;
-  width: auto;
   opacity: 0.9;
 }
 
 .gc-footer-right {
   text-align: left;
-  font-family: var(--font-main);
   text-transform: uppercase;
   letter-spacing: 0.139em;
 }
 
 .gc-footer-location {
   font-size: 0.75rem;
-  margin-bottom: 4px;
-  color: var(--gc-white);
 }
 
 .gc-footer-services {
   font-size: 0.7rem;
   color: var(--gc-red);
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .gc-footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 
