@@ -7,16 +7,11 @@
   --font-main: "Roboto", sans-serif;
 }
 
-/* GLOBAL */
 body.dark-bg {
   background: var(--gc-blue);
   color: var(--gc-white);
   font-family: var(--font-main);
   margin: 0;
-}
-
-.section {
-  padding: 80px 20px;
 }
 
 /* HEADER */
@@ -38,6 +33,8 @@ nav ul {
   display: flex;
   gap: 32px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -51,6 +48,9 @@ nav ul li a.active,
 nav ul li a:hover {
   color: var(--gc-brass);
 }
+
+/* HERO, ABOUT, FOOTER (keep your existing styles here) */
+
 
 /* HERO */
 .hero {
