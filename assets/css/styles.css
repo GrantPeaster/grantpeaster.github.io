@@ -85,35 +85,37 @@ nav ul li a:hover {
    HERO SECTIONS
    ========================================= */
 /* =========================================
-   HERO TAGLINE — UPDATED LAYOUT
+   HERO TAGLINE — LARGE BRASS VERSION
    ========================================= */
 
 .hero-tagline-main {
   font-family: var(--font-heading);
-  font-size: 3.2rem;
+  font-size: 4rem; /* larger */
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.5px;
-  color: var(--gc-white);
-  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  color: var(--gc-brass); /* warm brass */
+  margin: 0 0 12px 0;
   text-align: center;
   z-index: 2;
 }
 
 .hero-tagline-sub {
-  font-family: var(--font-body);
-  font-size: 1.6rem;
+  font-family: var(--font-heading); /* also Times New Roman MT Condensed */
+  font-size: 2.4rem; /* slightly smaller */
   font-weight: var(--font-weight-medium);
-  letter-spacing: 0.3px;
-  color: var(--gc-brass);
-  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+  color: var(--gc-brass); /* warm brass */
+  margin: 0 0 24px 0;
   text-align: center;
   z-index: 2;
 }
 
+/* Ensure the button stays above the carousel */
 .cta-button {
   position: relative;
   z-index: 2;
 }
+
 
 .hero {
   text-align: center;
