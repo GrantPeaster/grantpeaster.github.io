@@ -1,11 +1,12 @@
 /* =========================================
-   BRAND VARIABLES
+   GEORGIA CIVIL — BRAND VARIABLES
    ========================================= */
 :root {
   --gc-blue: #020534;
   --gc-red: #C8102E;
   --gc-brass: #b18750;
   --gc-white: #ffffff;
+  --gc-gray: #d1d1d1;
   --gc-black: #000000;
 
   --font-main: "Roboto", sans-serif;
@@ -22,8 +23,8 @@
 
 body {
   font-family: var(--font-main);
-  background: var(--gc-white);
   color: var(--gc-black);
+  background: var(--gc-white);
   line-height: 1.6;
 }
 
@@ -64,11 +65,12 @@ nav ul li a {
 }
 
 /* =========================================
-   HERO
+   HERO SECTION
    ========================================= */
 .hero {
   padding: 120px 20px;
   text-align: center;
+  background: var(--gc-white);
 }
 
 .hero h1 {
@@ -79,11 +81,16 @@ nav ul li a {
 
 .hero p {
   font-size: 1.2rem;
+  color: var(--gc-black);
 }
 
 /* =========================================
    ABOUT SECTION
    ========================================= */
+.about-section {
+  background: var(--gc-white);
+}
+
 .about-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -98,9 +105,12 @@ nav ul li a {
 .about-box p {
   margin-bottom: 18px;
   font-size: 1.05rem;
+  color: var(--gc-black);
 }
 
-/* --- TAGLINE SCROLL ANIMATION --- */
+/* =========================================
+   TAGLINE — SCROLL TRIGGERED ANIMATION
+   ========================================= */
 .gci-tagline {
   margin-top: 20px;
   font-weight: 600;
@@ -116,7 +126,7 @@ nav ul li a {
 }
 
 /* =========================================
-   FOOTER
+   FOOTER — LOVABLE STYLE
    ========================================= */
 .gc-footer {
   background: var(--gc-blue);
@@ -128,8 +138,8 @@ nav ul li a {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
 }
 
@@ -141,21 +151,26 @@ nav ul li a {
 
 .gc-footer-logo-main {
   height: 32px;
+  width: auto;
 }
 
 .gc-footer-logo-secondary {
   height: 28px;
+  width: auto;
   opacity: 0.9;
 }
 
 .gc-footer-right {
   text-align: left;
+  font-family: var(--font-main);
   text-transform: uppercase;
   letter-spacing: 0.139em;
 }
 
 .gc-footer-location {
   font-size: 0.75rem;
+  margin-bottom: 4px;
+  color: var(--gc-white);
 }
 
 .gc-footer-services {
@@ -163,13 +178,14 @@ nav ul li a {
   color: var(--gc-red);
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 700px) {
   .gc-footer-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 }
+
 
 
 
