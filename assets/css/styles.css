@@ -17,19 +17,22 @@
   --font-weight-bold: 700;
 }
 
-/* Google Fonts for Montserrat + Roboto */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap');
 
-/* Local font for Times New Roman MT Condensed (if installed) */
+/* Local font */
 @font-face {
   font-family: "Times New Roman MT Condensed";
   src: local("Times New Roman MT Condensed");
 }
+
+/* Universal image fix */
 img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
+
 /* =========================================
    GLOBAL
    ========================================= */
@@ -58,9 +61,9 @@ body.dark-bg {
 }
 
 .header-logo {
-  width: 260px;   /* adjust to taste */
-  max-width: 100%;
+  width: 180px;   /* FIXED SIZE */
   height: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
@@ -88,64 +91,64 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   HERO SECTIONS
+   HERO — CAROUSEL + TEXT
    ========================================= */
-/* =========================================
-   HERO TAGLINE — WHITE WITH BRASS GLOW
-   ========================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
 
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 0.35;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+/* HERO TEXT */
 .hero-tagline-main {
   font-family: var(--font-heading);
   font-size: 4rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
   color: var(--gc-white);
-  margin: 0 0 12px 0;
-  text-align: center;
-  text-shadow: 0 0 8px rgba(177, 135, 80, 0.55); /* subtle brass glow */
-  z-index: 2;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px rgba(177, 135, 80, 0.55);
 }
 
 .hero-tagline-sub {
   font-family: var(--font-heading);
   font-size: 2.4rem;
   font-weight: var(--font-weight-medium);
-  letter-spacing: 0.5px;
   color: var(--gc-white);
-  margin: 0 0 24px 0;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(177, 135, 80, 0.45); /* softer brass glow */
-  z-index: 2;
-}
-
-
-
-.hero {
-  text-align: center;
-  padding: 120px 20px 80px;
-}
-
-.hero-small {
-  text-align: center;
-  padding: 80px 20px 40px;
-}
-
-.company-title {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
-  font-size: 3rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-  color: var(--gc-white);
-}
-
-.company-slogan,
-.company-subtag {
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.5px;
-  color: var(--gc-brass);
+  margin-bottom: 24px;
+  text-shadow: 0 0 6px rgba(177, 135, 80, 0.45);
 }
 
 .cta-button {
@@ -158,92 +161,28 @@ nav ul li a:hover {
   font-weight: var(--font-weight-medium);
   border-radius: 4px;
 }
-/* =========================================
-   HERO BACKGROUND CAROUSEL (FIXED)
-   ========================================= */
-
-.hero {
-  position: relative !important;
-  overflow: hidden !important;
-  height: 420px !important; /* adjust if you want taller/shorter */
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-}
-
-.hero-carousel {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-}
-
-.carousel-image {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  opacity: 0 !important;
-  transition: opacity 1.5s ease-in-out !important;
-}
-
-.carousel-image.active {
-  opacity: 0.35 !important; /* ensures it shows immediately */
-}
-
-/* Ensure hero text stays above the carousel */
-.hero * {
-  position: relative;
-  z-index: 2;
-}
-
 
 /* =========================================
-   HEADINGS — Times New Roman MT Condensed
+   HERO SMALL (ABOUT PAGE)
    ========================================= */
-h1, h2, h3 {
+.hero-small {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.company-title {
   font-family: var(--font-heading);
-  margin: 0 0 1rem 0;
-}
-
-h2 {
-  font-size: 2.2rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--gc-brass);
-}
-
-h3 {
-  font-size: 1.6rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
+  font-size: 3rem;
   color: var(--gc-white);
 }
 
-/* =========================================
-   BODY TEXT — Montserrat
-   ========================================= */
-p {
+.company-slogan,
+.company-subtag {
   font-family: var(--font-body);
-  font-size: 1.1rem;
-  font-weight: var(--font-weight-regular);
-  margin-bottom: 1.25rem;
-  color: var(--gc-white);
-}
-
-.gold-text {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
   color: var(--gc-brass);
-  font-weight: var(--font-weight-medium);
-}
-
-.red-text {
-  color: var(--gc-red);
-  font-weight: var(--font-weight-medium);
 }
 
 /* =========================================
@@ -254,10 +193,8 @@ p {
   margin: 0 auto;
 }
 
-/* Tagline Animation */
 .gci-tagline {
   margin-top: 20px;
-  font-weight: var(--font-weight-medium);
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -269,7 +206,7 @@ p {
 }
 
 /* =========================================
-   FOOTER — Roboto, ALL CAPS, 139 spacing
+   FOOTER — FIXED LAYOUT
    ========================================= */
 .gc-footer {
   background: var(--gc-blue);
@@ -283,31 +220,27 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 .gc-footer-left {
-  width: 260px;   /* adjust to taste */
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  gap: 10px;
 }
+
 .gc-footer-logo-main {
-  width:250px;
-   height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .gc-footer-logo-secondary {
-  height: 28px;
+  width: 140px;
+  height: auto;
 }
 
 .gc-footer-right {
-  text-align: left;
+  text-align: right;
   text-transform: uppercase;
   letter-spacing: 0.139em;
 }
@@ -325,6 +258,25 @@ footer {
   font-weight: var(--font-weight-medium);
   color: var(--gc-red);
 }
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .gc-footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gc-footer-right {
+    text-align: center;
+  }
+
+  .header-logo {
+    width: 150px;
+  }
+}
+
 
 
 
