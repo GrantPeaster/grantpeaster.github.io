@@ -54,6 +54,7 @@ body.dark-bg {
 }
 
 .header-logo {
+  width: 300px;
   height: 50px;
   cursor: pointer;
 }
@@ -285,7 +286,8 @@ p {
 }
 
 .gc-footer-logo-main {
-  height: 32px;
+  width:250px;
+   height: auto;
 }
 
 .gc-footer-logo-secondary {
