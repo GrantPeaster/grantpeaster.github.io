@@ -193,6 +193,9 @@ nav ul li a:hover {
 
 .carousel-image.active {
   opacity: 0.35 !important;
+  transition: opacity 1s ease-in-out;
+}
+
 }
 
 
