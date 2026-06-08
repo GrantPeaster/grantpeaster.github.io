@@ -1,43 +1,30 @@
-/* =========================================
-   BRAND VARIABLES
-   ========================================= */
+/* BRAND COLORS */
 :root {
   --gc-blue: #020534;
   --gc-red: #C8102E;
   --gc-brass: #b18750;
   --gc-white: #ffffff;
-  --gc-black: #000000;
-
   --font-main: "Roboto", sans-serif;
 }
 
-/* GLOBAL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* GLOBAL */
 body.dark-bg {
   background: var(--gc-blue);
   color: var(--gc-white);
   font-family: var(--font-main);
-  line-height: 1.6;
+  margin: 0;
 }
 
 .section {
   padding: 80px 20px;
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
+/* HEADER */
 .site-header {
-  width: 100%;
-  padding: 20px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 32px;
   background: var(--gc-blue);
   border-bottom: 1px solid var(--gc-brass);
 }
@@ -48,13 +35,13 @@ body.dark-bg {
 
 nav ul {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   list-style: none;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: var(--gc-white);
+  text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.08em;
 }
@@ -63,65 +50,61 @@ nav ul li a.active {
   color: var(--gc-brass);
 }
 
-/* =========================================
-   HERO
-   ========================================= */
-.hero,
-.hero-small {
+/* HERO */
+.hero {
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 120px 20px 80px;
+}
+
+.hero-logo {
+  height: 90px;
+  margin-bottom: 20px;
 }
 
 .company-title {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--gc-white);
+  margin-bottom: 10px;
 }
 
-.company-slogan {
+.company-slogan,
+.company-subtag {
   font-size: 1.2rem;
-  color: var(--gc-brass);
-  margin-top: 10px;
-}
-
-/* =========================================
-   ABOUT SECTION
-   ========================================= */
-.about-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .gold-text {
   color: var(--gc-brass);
 }
 
-.about-box p {
-  margin-bottom: 18px;
-  font-size: 1.05rem;
-}
-
-/* TAGLINE ANIMATION */
-.gci-tagline {
-  margin-top: 20px;
-  font-weight: 600;
+.red-text {
   color: var(--gc-red);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.gci-tagline.visible {
-  opacity: 1;
-  transform: translateY(0);
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: var(--gc-red);
+  color: var(--gc-white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* ABOUT */
+.about-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-wrapper p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
 .gc-footer {
   background: var(--gc-blue);
-  color: var(--gc-white);
   padding: 24px 32px;
   border-top: 1px solid var(--gc-brass);
 }
@@ -136,7 +119,6 @@ nav ul li a.active {
 
 .gc-footer-left {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -146,7 +128,6 @@ nav ul li a.active {
 
 .gc-footer-logo-secondary {
   height: 28px;
-  opacity: 0.9;
 }
 
 .gc-footer-right {
