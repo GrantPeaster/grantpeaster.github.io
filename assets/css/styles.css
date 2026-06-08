@@ -61,7 +61,7 @@ body.dark-bg {
 }
 
 .header-logo {
-  width: 130px;   /* smaller */
+  width: 180px;   /* FIXED SIZE */
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -102,9 +102,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* FIX: reduce padding so text stays centered */
-  padding: 40px 20px;
+  padding: 120px 20px 80px;
 }
 
 .hero-carousel {
@@ -128,40 +126,83 @@ nav ul li a:hover {
   opacity: 0.35;
 }
 
-/* FIX: ensure hero text ALWAYS stays above carousel */
 .hero * {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 /* HERO TEXT */
 .hero-tagline-main {
   font-family: var(--font-heading);
-  font-size: 3.6rem; /* large */
+  font-size: 4rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
   color: var(--gc-white);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-shadow: 0 0 8px rgba(177, 135, 80, 0.55);
 }
 
 .hero-tagline-sub {
   font-family: var(--font-heading);
-  font-size: 2.2rem; /* slightly smaller */
+  font-size: 2.4rem;
   font-weight: var(--font-weight-medium);
-  margin-bottom: 20px;
+  color: var(--gc-white);
+  margin-bottom: 24px;
   text-shadow: 0 0 6px rgba(177, 135, 80, 0.45);
 }
 
 .cta-button {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 12px 28px;
   background: var(--gc-red);
   color: var(--gc-white);
   text-decoration: none;
   font-weight: var(--font-weight-medium);
   border-radius: 4px;
+}
+
+/* =========================================
+   HERO SMALL (ABOUT PAGE)
+   ========================================= */
+.hero-small {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.company-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 3rem;
+  color: var(--gc-white);
+}
+
+.company-slogan,
+.company-subtag {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--gc-brass);
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+.about-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gci-tagline {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gci-tagline.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =========================================
@@ -189,12 +230,12 @@ nav ul li a:hover {
 }
 
 .gc-footer-logo-main {
-  width: 150px;  /* smaller */
+  width: 200px;
   height: auto;
 }
 
 .gc-footer-logo-secondary {
-  width: 100px; /* smaller */
+  width: 140px;
   height: auto;
 }
 
@@ -232,7 +273,7 @@ nav ul li a:hover {
   }
 
   .header-logo {
-    width: 110px;
+    width: 150px;
   }
 }
 
