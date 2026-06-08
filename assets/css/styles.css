@@ -191,7 +191,32 @@ nav ul li a {
     flex-direction: column;
     align-items: flex-start;
   }
+/* Start hidden so animation always fires */
+.gci-hidden {
+  opacity: 0;
+  transform: translateY(12px);
 }
+
+/* Animated tagline */
+.gci-tagline {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--gc-red);
+  animation: taglineFadeUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes taglineFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 
