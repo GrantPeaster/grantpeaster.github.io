@@ -58,7 +58,7 @@
           That’s what we mean by your complete project partner. One team. One relationship. Every phase.
         </p>
 
-        <p <p class="gci-tagline gci-hidden">
+        <p <p class="gci-tagline>
           Growing. Creating. Innovating. G…C…I…
         </p>
       </div>
@@ -153,10 +153,20 @@
   </div>
 </footer>
 <script>
-  window.addEventListener("load", () => {
-    document.querySelector(".gci-tagline").classList.remove("gci-hidden");
-  });
+  const tagline = document.querySelector('.gci-tagline');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tagline.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(tagline);
 </script>
+
+
 
 </body>
 </html>
