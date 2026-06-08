@@ -12,7 +12,6 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <!-- use your existing logo, just wrapped in a link -->
     <a href="index.html">
       <img src="assets/img/download.png" alt="Georgia Civil Logo" class="header-logo" />
     </a>
@@ -27,24 +26,19 @@
 
   <!-- HERO -->
   <section class="hero">
-  
 
-  <!-- ✅ Add this block at the TOP of the hero -->
-  <div class="hero-carousel">
-    <img src="assets/img/MorganMedical.JPG" class="carousel-image" alt="">
-    <img src="assets/img/Farmview.JPG" class="carousel-image" alt="">
-  </div>
-  <!-- END carousel -->
+    <!-- IMAGE CAROUSEL -->
+    <div class="hero-carousel">
+      <img src="assets/img/MorganMedical.JPG" class="carousel-image active" alt="">
+      <img src="assets/img/Farmview.JPG" class="carousel-image" alt="">
+    </div>
 
- <h1 class="hero-tagline-main">Your Complete Project Partner:</h1>
-<p class="hero-tagline-sub">Growing, Creating, Innovating</p>
+    <h1 class="hero-tagline-main">Your Complete Project Partner:</h1>
+    <p class="hero-tagline-sub">Growing, Creating, Innovating</p>
 
-<a href="about.html" class="cta-button">Learn More</a>
+    <a href="about.html" class="cta-button">Learn More</a>
 
-    
   </section>
-
-
 
   <!-- FOOTER -->
   <footer class="gc-footer">
@@ -64,18 +58,20 @@
 
     </div>
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".carousel-image");
-    let index = 0;
 
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 4000); // 4 seconds per slide
-  });
-</script>
+  <!-- CAROUSEL SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".carousel-image");
+      let index = 0;
+
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }, 4000);
+    });
+  </script>
 
 </body>
 </html>
