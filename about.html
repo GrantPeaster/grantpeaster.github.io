@@ -4,29 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Georgia Civil</title>
- <link rel="stylesheet" href="assets/css/styles.css" />
-
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body>
+<body class="dark-bg">
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">
-      <img src="assets/img/download.png" alt="Georgia Civil Logo" />
-    </a>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- HEADER -->
+  <header class="site-header">
+    <img src="assets/img/download.png" class="header-logo" alt="Georgia Civil Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- ABOUT PAGE -->
+  <!-- TITLE + SLOGAN -->
+  <section class="hero-small">
+    <h1 class="company-title">Georgia Civil</h1>
+    <p class="company-slogan">Your Complete Project Partner: Growing, Creating, Innovating</p>
+  </section>
+
+  <!-- ABOUT CONTENT -->
   <section class="section about-section">
     <div class="about-wrapper">
 
-      <h2>About Georgia Civil</h2>
+      <h2 class="gold-text">About Georgia Civil</h2>
 
       <div class="about-box">
         <p>
@@ -67,7 +73,7 @@
     </div>
   </footer>
 
-  <!-- TAGLINE SCROLL ANIMATION -->
+  <!-- SCROLL ANIMATION -->
   <script>
     const tagline = document.querySelector('.gci-tagline');
 
@@ -84,3 +90,4 @@
 
 </body>
 </html>
+
