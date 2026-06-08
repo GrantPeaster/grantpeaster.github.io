@@ -129,6 +129,11 @@ nav ul li a:hover {
 .hero {
   position: relative;
   overflow: hidden;
+  height: 420px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-carousel {
