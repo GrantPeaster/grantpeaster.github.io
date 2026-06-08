@@ -67,6 +67,28 @@ h1, h2 {
 .top-nav a:hover {
   color: var(--gc-red);
 }
+/* Tagline animation */
+.gci-tagline {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--gc-red);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: taglineFadeUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes taglineFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===========================
    FOOTER — Lovable Exact Layout
    =========================== */
