@@ -31,6 +31,7 @@ body.dark-bg {
 
 .header-logo {
   height: 50px;
+  cursor: pointer;
 }
 
 nav ul {
@@ -46,7 +47,8 @@ nav ul li a {
   letter-spacing: 0.08em;
 }
 
-nav ul li a.active {
+nav ul li a.active,
+nav ul li a:hover {
   color: var(--gc-brass);
 }
 
@@ -54,6 +56,11 @@ nav ul li a.active {
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
+}
+
+.hero-small {
+  text-align: center;
+  padding: 80px 20px 40px;
 }
 
 .hero-logo {
@@ -102,6 +109,20 @@ nav ul li a.active {
   font-size: 1.1rem;
 }
 
+/* TAGLINE ANIMATION */
+.gci-tagline {
+  margin-top: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gci-tagline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* FOOTER */
 .gc-footer {
   background: var(--gc-blue);
@@ -144,7 +165,6 @@ nav ul li a.active {
   font-size: 0.7rem;
   color: var(--gc-red);
 }
-
 
 
 
