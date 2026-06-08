@@ -1,73 +1,114 @@
-/* ============================================
-   GEORGIA CIVIL BRAND VARIABLES
-============================================ */
+/* =========================================
+   GEORGIA CIVIL — BRAND VARIABLES
+   ========================================= */
 :root {
-  --gc-red: #CA2131;
-  --gc-brass: #B18750;
   --gc-blue: #020534;
-  --gc-gray: #787878;
-  --gc-white: #FFFFFF;
+  --gc-red: #C8102E;
+  --gc-brass: #b18750;
+  --gc-white: #ffffff;
+  --gc-gray: #d1d1d1;
   --gc-black: #000000;
 
-  --font-body: "Montserrat", sans-serif;
-  --font-heading: "Times New Roman MT Condensed", serif;
-  --font-nav: "Roboto", sans-serif;
+  --font-main: "Roboto", sans-serif;
 }
 
-/* ============================================
-   GLOBAL
-============================================ */
-body {
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+* {
   margin: 0;
-  font-family: var(--font-body);
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--gc-black);
+  background: var(--gc-white);
+  line-height: 1.6;
 }
 
 .section {
   padding: 80px 20px;
 }
 
-h1, h2 {
-  font-family: var(--font-heading);
-  letter-spacing: 0.5px;
+/* =========================================
+   NAVIGATION
+   ========================================= */
+nav {
+  width: 100%;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gc-white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* ============================================
-   TOP NAV BAR (WHY GCI / SERVICES / PORTFOLIO)
-============================================ */
-.top-nav {
-  background: var(--gc-blue);
-  padding: 10px 0;
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+nav img {
+  height: 40px;
 }
 
-.top-nav ul {
+nav ul {
+  display: flex;
+  gap: 24px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.top-nav li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.top-nav a {
-  font-family: var(--font-nav);
-  text-transform: uppercase;
-  letter-spacing: 0.139em;
-  color: var(--gc-brass);
+nav ul li a {
   text-decoration: none;
-  font-size: 14px;
+  color: var(--gc-black);
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
-.top-nav a:hover {
-  color: var(--gc-red);
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  background: var(--gc-white);
 }
-/* Tagline animation */
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--gc-black);
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+.about-section {
+  background: var(--gc-white);
+}
+
+.about-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-box p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: var(--gc-black);
+}
+
+/* --- Animated tagline --- */
 .gci-tagline {
   margin-top: 20px;
   font-weight: 600;
@@ -89,13 +130,12 @@ h1, h2 {
   }
 }
 
-/* ===========================
-   FOOTER — Lovable Exact Layout
-   =========================== */
-
+/* =========================================
+   FOOTER — LOVABLE STYLE
+   ========================================= */
 .gc-footer {
-  background: #020534; /* dark blue */
-  color: #ffffff;
+  background: var(--gc-blue);
+  color: var(--gc-white);
   padding: 24px 32px;
 }
 
@@ -126,24 +166,23 @@ h1, h2 {
   opacity: 0.9;
 }
 
-/* Right: LEFT-ALIGNED text block */
+/* Right: left-aligned text block */
 .gc-footer-right {
-  text-align: left; /* FIXED */
-  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-family: var(--font-main);
   text-transform: uppercase;
   letter-spacing: 0.139em;
 }
 
 .gc-footer-location {
   font-size: 0.75rem;
-  margin: 0 0 4px 0;
-  color: #ffffff;
+  margin-bottom: 4px;
+  color: var(--gc-white);
 }
 
 .gc-footer-services {
   font-size: 0.7rem;
-  margin: 0;
-  color: #b18750; /* brass */
+  color: var(--gc-red);
 }
 
 /* Mobile */
@@ -152,190 +191,6 @@ h1, h2 {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-
-
-
-/* ============================================
-   MAIN NAVIGATION (LOGO + 3 LINKS)
-============================================ */
-nav {
-  background: var(--gc-blue);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .logo {
-  height: 55px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-nav a {
-  font-family: var(--font-nav);
-  text-transform: uppercase;
-  letter-spacing: 0.139em;
-  color: var(--gc-white);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: var(--gc-brass);
-}
-
-/* ============================================
-   HERO
-============================================ */
-.hero {
-  text-align: center;
-  padding: 120px 20px 100px;
-  background: var(--gc-blue);
-}
-
-.hero-logo {
-  height: 120px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin: 10px 0;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn-primary {
-  background: var(--gc-blue);
-  color: var(--gc-white);
-  border: 2px solid var(--gc-brass);
-  padding: 12px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: var(--gc-brass);
-  color: var(--gc-blue);
-}
-
-/* ============================================
-   ABOUT SECTION + BACKGROUND HILLS
-============================================ */
-.about-section {
-  position: relative;
-  overflow: visible;
-  background: var(--gc-blue);
-}
-
-.about-wrapper {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  z-index: 2;
-}
-
-.about-box {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 30px;
-  border-radius: 12px;
-  position: relative;
-  z-index: 3;
-  backdrop-filter: blur(6px);
-}
-
-.gci-tagline {
-  margin-top: 20px;
-  font-weight: 600;
-  color: var(--gc-red) !important;
-}
-
-
-/* ============================================
-   ROLLING HILLS SVG (BEHIND ABOUT BOX)
-============================================ */
-.gci-swoosh {
-  position: absolute;
-  bottom: -40px; /* moves hills upward behind the box */
-  left: 50%;
-  transform: translateX(-50%) scale(1.45); /* makes hills larger */
-  width: 140%; /* extends hills beyond both sides */
-  opacity: 0;
-  z-index: 1; /* behind box, above background */
-  transition: opacity 1.2s ease, transform 1.2s ease;
-}
-
-.gci-swoosh.animate {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1.45);
-}
-
-
-.gci-swoosh.animate {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.swoosh-line {
-  stroke-dasharray: var(--len);
-  stroke-dashoffset: var(--len);
-  animation: draw 2.4s ease forwards;
-}
-
-.swoosh-line:nth-child(2) { animation-delay: 0.15s; }
-.swoosh-line:nth-child(3) { animation-delay: 0.3s; }
-.swoosh-line:nth-child(4) { animation-delay: 0.45s; }
-.swoosh-line:nth-child(5) { animation-delay: 0.6s; }
-.swoosh-line:nth-child(6) { animation-delay: 0.75s; }
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* ============================================
-   CONTACT SECTION
-============================================ */
-.contact-section input,
-.contact-section textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid var(--gc-gray);
-  font-family: var(--font-body);
-}
-
-.btn-secondary {
-  background: var(--gc-red);
-  color: var(--gc-white);
-  padding: 12px 28px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background: var(--gc-brass);
-  color: var(--gc-blue);
 }
 
 
