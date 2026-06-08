@@ -271,60 +271,61 @@ p {
 /* =========================================
    FOOTER — Roboto, ALL CAPS, 139 spacing
    ========================================= */
+/* FOOTER FIX — ALIGNMENT + LOGO SIZING */
+
 .gc-footer {
-  background: var(--gc-blue);
+  background: #020534;
   padding: 24px 32px;
-  border-top: 1px solid var(--gc-brass);
 }
 
 .gc-footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  align-items: center;        /* aligns logos + text on same baseline */
   justify-content: space-between;
-  align-items: center;
+  gap: 24px;
 }
 
+/* Left side: logos */
 .gc-footer-left {
-  width: 260px;   /* adjust to taste */
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-}
-.gc-footer-logo-main {
-  width:250px;
-   height: auto;
+  gap: 10px;
 }
 
-.gc-footer-logo-secondary {
-  height: 28px;
+.gc-footer-left img {
+  height: 26px;               /* SHRINK logos to match reference */
+  width: auto;
+  object-fit: contain;
 }
 
+/* Right side: text */
 .gc-footer-right {
   text-align: left;
   text-transform: uppercase;
-  letter-spacing: 0.139em;
+  letter-spacing: 0.14em;
+  font-family: "Roboto", sans-serif;
 }
 
-.gc-footer-location {
-  font-family: var(--font-nav);
-  font-size: 0.8rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--gc-white);
-}
-
-.gc-footer-services {
-  font-family: var(--font-nav);
+.gc-footer-right .gc-footer-location {
   font-size: 0.75rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--gc-red);
+  margin: 0 0 4px 0;
 }
+
+.gc-footer-right .gc-footer-services {
+  font-size: 0.7rem;
+  margin: 0;
+  color: #b18750;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .gc-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 
 
 
