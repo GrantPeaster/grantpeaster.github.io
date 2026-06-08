@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Georgia Civil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">
+      <img src="assets/img/download.png" alt="Georgia Civil Logo" />
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT PAGE -->
+  <section class="section about-section">
+    <div class="about-wrapper">
+
+      <h2>About Georgia Civil</h2>
+
+      <div class="about-box">
+        <p>
+          Every project we touch shapes the future of our region — growing the landscape, creating the drawings and plans that make development possible, and innovating with technology that most firms our size simply don’t have access to.
+        </p>
+
+        <p>
+          We put surveyors, civil engineers, and land planners on your team so you never have to settle for delays, gaps in communication, or inflated costs that come with transactional services.
+        </p>
+
+        <p>
+          That’s what we mean by your complete project partner. One team. One relationship. Every phase.
+        </p>
+
+        <p class="gci-tagline">
+          Growing. Creating. Innovating. G…C…I…
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="gc-footer">
+    <div class="gc-footer-inner">
+
+      <div class="gc-footer-left">
+        <img src="assets/img/download.png" class="gc-footer-logo-main" alt="Logo" />
+        <img src="assets/img/SecondaryLogoGCI.png" class="gc-footer-logo-secondary" alt="Secondary Logo" />
+      </div>
+
+      <div class="gc-footer-right">
+        <p class="gc-footer-location">MADISON, GA</p>
+        <p class="gc-footer-services">
+          CIVIL ENGINEERING · LANDSCAPE ARCHITECTURE · LAND SURVEYING
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- TAGLINE SCROLL ANIMATION -->
+  <script>
+    const tagline = document.querySelector('.gci-tagline');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tagline.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(tagline);
+  </script>
+
+</body>
+</html>
