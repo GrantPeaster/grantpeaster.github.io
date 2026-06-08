@@ -85,36 +85,33 @@ nav ul li a:hover {
    HERO SECTIONS
    ========================================= */
 /* =========================================
-   HERO TAGLINE — LARGE BRASS VERSION
+   HERO TAGLINE — WHITE WITH BRASS GLOW
    ========================================= */
 
 .hero-tagline-main {
   font-family: var(--font-heading);
-  font-size: 4rem; /* larger */
+  font-size: 4rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
-  color: var(--gc-brass); /* warm brass */
+  color: var(--gc-white);
   margin: 0 0 12px 0;
   text-align: center;
+  text-shadow: 0 0 8px rgba(177, 135, 80, 0.55); /* subtle brass glow */
   z-index: 2;
 }
 
 .hero-tagline-sub {
-  font-family: var(--font-heading); /* also Times New Roman MT Condensed */
-  font-size: 2.4rem; /* slightly smaller */
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.5px;
-  color: var(--gc-brass); /* warm brass */
+  color: var(--gc-white);
   margin: 0 0 24px 0;
   text-align: center;
+  text-shadow: 0 0 6px rgba(177, 135, 80, 0.45); /* softer brass glow */
   z-index: 2;
 }
 
-/* Ensure the button stays above the carousel */
-.cta-button {
-  position: relative;
-  z-index: 2;
-}
 
 
 .hero {
