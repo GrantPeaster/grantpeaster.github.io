@@ -77,28 +77,25 @@
 
     </div>
   </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tagline = document.querySelector('.gci-tagline');
+    if (!tagline) return;
 
-  <!-- TAGLINE ANIMATION -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tagline = document.querySelector('.gci-tagline');
-      if (!tagline) return;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tagline.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 });
 
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            tagline.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.4 });
-
-      observer.observe(tagline);
-    });
-  </script>
+    observer.observe(tagline);
+  });
+</script>
 
 </body>
 </html>
-
 
 
 
