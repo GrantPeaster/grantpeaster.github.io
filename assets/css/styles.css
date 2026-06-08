@@ -189,12 +189,8 @@ nav ul li a:hover {
 }
 
 .carousel-image.active {
-  opacity: 0.35 !important;
-  transition: opacity 1s ease-in-out;
+  opacity: 0.35 !important; /* ensures it shows immediately */
 }
-
-}
-
 
 /* Ensure hero text stays above the carousel */
 .hero * {
