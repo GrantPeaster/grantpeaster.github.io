@@ -58,11 +58,11 @@ body.dark-bg {
 }
 
 .header-logo {
-  width: 260px;   /* adjust to taste */
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  height: 32px;   /* clean, professional size */
+  width: auto;
+  object-fit: contain;
 }
+
 
 nav ul {
   display: flex;
