@@ -115,20 +115,15 @@ nav ul li a {
   color: var(--gc-red);
   opacity: 0;
   transform: translateY(12px);
-  animation: taglineFadeUp 0.8s ease-out forwards;
-  animation-delay: 0.3s;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-@keyframes taglineFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.gci-tagline.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+ 
 
 /* =========================================
    FOOTER — LOVABLE STYLE
