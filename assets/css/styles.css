@@ -25,7 +25,11 @@
   font-family: "Times New Roman MT Condensed";
   src: local("Times New Roman MT Condensed");
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 /* =========================================
    GLOBAL
    ========================================= */
@@ -54,9 +58,10 @@ body.dark-bg {
 }
 
 .header-logo {
-  width: 300px;
-  height: 50px;
-  cursor: pointer;
+  width: 260px;   /* adjust to taste */
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 nav ul {
@@ -281,10 +286,17 @@ p {
 }
 
 .gc-footer-left {
-  display: flex;
-  gap: 12px;
+  width: 260px;   /* adjust to taste */
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
-
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 .gc-footer-logo-main {
   width:250px;
    height: auto;
