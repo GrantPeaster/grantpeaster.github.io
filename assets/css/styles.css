@@ -122,6 +122,42 @@ nav ul li a:hover {
   font-weight: var(--font-weight-medium);
   border-radius: 4px;
 }
+/* =========================================
+   HERO BACKGROUND CAROUSEL
+   ========================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 0.35; /* subtle so text stays readable */
+}
+
+/* Ensure hero text stays above the carousel */
+.hero * {
+  position: relative;
+  z-index: 2;
+}
 
 /* =========================================
    HEADINGS — Times New Roman MT Condensed
