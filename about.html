@@ -1,71 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why GCI – Georgia Civil</title>
-  <link rel="icon" type="image/png" href="assets/img/gcifavicon (1).png">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Georgia Civil</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="dark-bg">
+<body>
 
   <!-- HEADER -->
-  <header class="site-header">
-    <a href="index.html">
-      <img src="assets/img/download.png" alt="Georgia Civil Logo" class="header-logo" />
-    </a>
+  <header class="gc-header">
+    <div class="gc-header-logo">
+      <a href="index.html">
+        <img src="assets/img/download.png" alt="Georgia Civil Logo">
+      </a>
+    </div>
 
-    <nav>
-      <ul>
-        <li><a class="active" href="about.html">Why GCI</a></li>
-        <li><a class="active" href="portfolio.html">Portfolio</a></li>
-      </ul>
+    <nav class="gc-nav">
+      <a href="about.html">Why GCI</a>
+      <a href="portfolio.html">Portfolio</a>
     </nav>
   </header>
 
-  <!-- HERO SMALL -->
-  <section class="hero-small">
-    <h1 class="company-title">Why GCI</h1>
-    <p class="company-slogan gold-text">Your Complete Project Partner</p>
-    <p class="company-subtag gold-text">Growing, Creating, Innovating</p>
+
+  <!-- HERO -->
+  <section class="gc-about-hero">
+    <h1>About Georgia Civil</h1>
+    <p class="gc-tagline">Growing. Creating. Innovating. G…C…I…</p>
   </section>
+
 
   <!-- ABOUT CONTENT -->
-  <section class="section about-section">
-    <div class="about-wrapper">
-
+  <section class="gc-about-content">
+    <div class="gc-about-text">
+      <h2>Your Complete Project Partner</h2>
       <p>
-        Every project we touch shapes the future of our region — growing the landscape,
-        creating the drawings and plans that make development possible, and innovating
-        with technology that most firms our size simply don’t have access to.
+        Every project we touch shapes the future of our region — growing the landscape, creating the drawings and plans that make development possible, and innovating with technology that most firms our size simply don’t have access to.
       </p>
-
       <p>
-        We put surveyors, civil engineers, and land planners on your team so you never
-        have to settle for delays, gaps in communication, or inflated costs that come
-        with transactional services.
+        We put surveyors, civil engineers, and land planners on your team so you never have to settle for delays, gaps in communication, or inflated costs that come with transactional services.
       </p>
-
       <p>
-        That’s what we mean by your complete project partner. One team. One relationship.
-        Every phase.
+        That’s what we mean by your complete project partner. One team. One relationship. Every phase.
       </p>
-
-      <p class="gci-tagline red-text">
-        Growing. Creating. Innovating. G…C…I…
-      </p>
-
     </div>
+
+    <div class="gc-about-graphic"></div>
   </section>
+
 
   <!-- FOOTER -->
   <footer class="gc-footer">
     <div class="gc-footer-inner">
 
       <div class="gc-footer-left">
-        <img src="assets/img/download.png" class="gc-footer-logo-main" alt="Logo" />
-        <img src="assets/img/SecondaryLogoGCI.png" class="gc-footer-logo-secondary" alt="Secondary Logo" />
+        <img src="assets/img/download.png" class="gc-footer-logo-main" alt="Georgia Civil Logo">
+        <img src="assets/img/SecondaryLogoGCI.png" class="gc-footer-logo-secondary" alt="Secondary Logo">
       </div>
 
       <div class="gc-footer-right">
@@ -77,27 +68,8 @@
 
     </div>
   </footer>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const tagline = document.querySelector('.gci-tagline');
-    if (!tagline) return;
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          tagline.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.4 });
-
-    observer.observe(tagline);
-  });
-</script>
 
 </body>
 </html>
-
-
-
 
 
