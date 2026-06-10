@@ -199,8 +199,8 @@ nav ul li a:hover {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  opacity: 0 
-  transition: opacity 1s ease-in-out;
+  opacity: 0 !important;
+  transition: opacity 1s ease-in-out !important;
 }
 
 .carousel-image.active {
