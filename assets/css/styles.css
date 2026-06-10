@@ -263,19 +263,6 @@ p {
   margin: 0 auto;
 }
 
-/* Tagline Animation */
-.gci-tagline {
-  margin-top: 20px;
-  font-weight: var(--font-weight-medium);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.gci-tagline.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* =========================================
    FOOTER — Roboto, ALL CAPS, 139 spacing
@@ -423,10 +410,11 @@ p {
 
 /* ABOUT PAGE HERO */
 .gc-about-hero {
+  position: relative;
+  text-align: center;
   background: var(--gc-blue);
   color: var(--gc-white);
-  text-align: center;
-  padding: 120px 32px 80px;
+  padding: 140px 32px 100px;
 }
 
 .gc-about-hero h1 {
@@ -440,8 +428,22 @@ p {
   font-size: 1rem;
   letter-spacing: 0.12em;
   opacity: 0;
-  animation: fadeInUp 1.2s ease forwards;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.4s;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* ABOUT CONTENT */
 .gc-about-content {
