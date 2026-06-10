@@ -410,12 +410,17 @@ p {
 
 /* ABOUT PAGE HERO */
 .gc-about-hero {
-  position: relative;
-  text-align: center;
   background: var(--gc-blue);
   color: var(--gc-white);
-  padding: 140px 32px 100px;
+  text-align: center;
+  padding: 120px 32px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px; /* tweak as you like */
 }
+
 
 .gc-about-hero h1 {
   font-size: 2.6rem;
@@ -424,8 +429,9 @@ p {
 }
 
 .gc-tagline {
+  margin-top: 20px;
+  font-weight: var(--font-weight-medium);
   color: var(--gc-brass);
-  font-size: 1rem;
   letter-spacing: 0.12em;
   opacity: 0;
   transform: translateY(20px);
@@ -445,35 +451,7 @@ p {
 }
 
 
-/* ABOUT CONTENT */
-.gc-about-content {
-  max-width: 1200px;
-  margin: 80px auto 120px;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
 
-.gc-about-text h2 {
-  color: var(--gc-blue);
-  margin-bottom: 16px;
-  font-size: 1.8rem;
-}
-
-.gc-about-text p {
-  margin-bottom: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Subtle branded graphic */
-.gc-about-graphic {
-  background: url("assets/img/rolling-hills.svg") center/contain no-repeat;
-  height: 300px;
-  opacity: 0.25;
-}
 
 /* Mobile */
 @media (max-width: 800px) {
