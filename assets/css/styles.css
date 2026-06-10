@@ -205,7 +205,7 @@ nav ul li a:hover {
 }
 
 .carousel-image.active {
-  opacity: 0.35 !important; /* ensures it shows immediately */
+  opacity: 1 !important; /* ensures it shows immediately */
 }
 
 .hero * {
@@ -295,7 +295,7 @@ p {
   justify-content: space-between;
   gap: 24px;
 }
-
+}
 /* Left side: logos */
 .gc-footer-left {
   display: flex;
