@@ -256,14 +256,6 @@ p {
   font-weight: var(--font-weight-medium);
 }
 
-/* =========================================
-   ABOUT SECTION
-   ========================================= */
-.about-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 
 /* =========================================
    FOOTER — Roboto, ALL CAPS, 139 spacing
@@ -455,6 +447,7 @@ p {
     transform: translateY(0);
   }
 }
+
 
 /* Mobile */
 @media (max-width: 800px) {
