@@ -118,13 +118,14 @@ nav ul li a:hover {
 .hero-tagline-sub {
   font-family: var(--font-heading);
   font-size: 2.2rem;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.5px;
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.03 em;
   color: var(--gc-white);
   margin-bottom: 28px;
   text-align: center;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.45); /* softer brass glow */
   z-index: 2;
+  font-style: italic;
 }
 
 
