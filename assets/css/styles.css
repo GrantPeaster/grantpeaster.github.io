@@ -414,12 +414,11 @@ p {
   background: var(--gc-blue);
   color: var(--gc-white);
   text-align: center;
-  padding: 120px 32px 80px;
+  padding: 140px 32px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 320px; /* tweak as you like */
 }
 
 
@@ -429,10 +428,24 @@ p {
   letter-spacing: 0.06em;
 }
 
+   .gc-about-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.gc-title-underline {
+  width: 70px;
+  height: 4px;
+  background: var(--gc-brass);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+
 .gc-tagline {
-  margin-top: 20px;
-  font-weight: var(--font-weight-medium);
   color: var(--gc-brass);
+  font-size: 1.1rem;
   letter-spacing: 0.12em;
   opacity: 0;
   transform: translateY(20px);
@@ -450,6 +463,7 @@ p {
     transform: translateY(0);
   }
 }
+
 
 
 
