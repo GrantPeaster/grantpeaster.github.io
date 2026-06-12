@@ -275,7 +275,7 @@ p {
   justify-content: space-between;
   gap: 24px;
 }
-}
+
 /* Left side: logos */
 .gc-footer-left {
   display: flex;
