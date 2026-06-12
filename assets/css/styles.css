@@ -209,10 +209,12 @@ nav ul li a:hover {
   opacity: 1 !important; /* ensures it shows immediately */
 }
 
-.hero * {
+
+.index-page .hero * {
   position: relative;
   z-index: 2;
 }
+
 
 
 /* =========================================
