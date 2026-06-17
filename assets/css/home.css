@@ -3,15 +3,10 @@
    ========================================= */
 .hero {
   position: relative;
-  height: 750px;   /* increased from 520px */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+  height: auto;        /* allow full image height */
+  padding: 0;
 }
-
+  
 /* BACKGROUND CAROUSEL */
 .hero-carousel {
   position: absolute;
@@ -22,14 +17,10 @@
 }
 
 .carousel-image {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: contain;     /* show full image */
-  background: #020534;     /* fill empty space with brand blue */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  height: auto;        /* keep full image */
+  object-fit: contain; /* no cropping */
+  background-color: #020534;
 }
 
 .carousel-image.active {
