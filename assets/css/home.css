@@ -3,7 +3,7 @@
    ========================================= */
 .hero {
   position: relative;
-  height: 680px;   /* increased from 520px */
+  height: 750px;   /* increased from 520px */
   display: flex;
   flex-direction: column;
   justify-content: center;
