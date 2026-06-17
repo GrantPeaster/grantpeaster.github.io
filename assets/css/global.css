@@ -1,0 +1,205 @@
+/* =========================================
+   BRAND + GLOBAL
+   ========================================= */
+:root {
+  --gc-blue: #020534;
+  --gc-red: #C8102E;
+  --gc-brass: #b18750;
+  --gc-white: #ffffff;
+
+  --font-heading: "Times New Roman MT Condensed", serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-nav: "Roboto", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background: var(--gc-blue);
+  color: var(--gc-white);
+  line-height: 1.65;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: var(--gc-blue);
+  border-bottom: 1px solid var(--gc-brass);
+}
+
+.header-logo {
+  height: 32px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: var(--font-nav);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.95rem;
+  letter-spacing: 0.139em;
+  text-transform: uppercase;
+  color: var(--gc-white);
+  text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--gc-brass);
+}
+
+/* =========================================
+   ABOUT HERO
+   ========================================= */
+.gc-about-hero {
+  text-align: center;
+  padding: 140px 32px 100px;
+}
+
+.gc-about-title {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.gc-title-underline {
+  width: 70px;
+  height: 4px;
+  background: var(--gc-brass);
+  border-radius: 2px;
+  margin: 0 auto 24px;
+}
+
+.gc-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gc-brass);
+  letter-spacing: 0.12em;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   ABOUT CONTENT
+   ========================================= */
+.gc-about-content {
+  max-width: 1200px;
+  margin: 80px auto 120px;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.gc-about-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--gc-brass);
+  margin-bottom: 16px;
+}
+
+.gc-about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--gc-white);
+}
+
+.gc-about-graphic {
+  background: url("../img/rolling-hills.svg") center/contain no-repeat;
+  height: 300px;
+  opacity: 0.25;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.gc-footer {
+  background: var(--gc-blue);
+  padding: 24px 32px;
+}
+
+.gc-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gc-footer-left img {
+  height: 26px;
+  width: auto;
+}
+
+.gc-footer-right {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-family: var(--font-nav);
+}
+
+.gc-footer-location {
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.gc-footer-services {
+  font-size: 0.7rem;
+  color: var(--gc-brass);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+@media (max-width: 800px) {
+  .gc-about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .gc-about-graphic {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
