@@ -1,13 +1,12 @@
 /* =========================================
-   HOMEPAGE HERO — FULL IMAGE, NO CROPPING
+   HOMEPAGE HERO — FULL IMAGE, FADE TRANSITION
    ========================================= */
 .hero {
   position: relative;
   width: 100%;
-  height: auto;              /* allow image to define height */
+  height: auto;              /* allow image height to define hero height */
   padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -23,19 +22,27 @@
   z-index: 0;
 }
 
+/* IMAGES — FULL IMAGE, NO CROPPING, FADE TRANSITION */
 .carousel-image {
   width: 100%;
-  height: auto;              /* keeps full image */
-  object-fit: contain;       /* shows entire picture */
-  display: none;             /* hide all by default */
-  background-color: #020534; /* fills empty space */
+  height: auto;
+  object-fit: contain;       /* show full picture */
+  background-color: #020534;
+  opacity: 0;                /* start hidden */
+  transition: opacity 1.2s ease-in-out;  /* fade effect */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .carousel-image.active {
-  display: block;            /* show only active image */
+  opacity: 1;                /* fade in */
+  position: relative;        /* ensures correct stacking */
 }
 
-/* HERO TEXT */
+/* =========================================
+   HERO TEXT
+   ========================================= */
 .hero-tagline-main {
   position: absolute;
   top: 35%;
@@ -78,7 +85,9 @@
   z-index: 2;
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
 @media (max-width: 700px) {
   .hero-tagline-main {
     font-size: 2.4rem;
