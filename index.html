@@ -4,73 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Georgia Civil</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="assets/img/gcifavicon (1).png">
-
+<link rel="icon" type="image/png" href="assets/img/gcifavicon (1).png">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
-<body class="dark-bg index-page">
-
-
+<body>
 
   <!-- HEADER -->
   <header class="site-header">
-    <a href="index.html">
-      <img src="assets/img/download.png" alt="Georgia Civil Logo" class="header-logo">
-    </a>
+    <img src="assets/img/logo.png" class="header-logo" alt="Georgia Civil Logo">
 
     <nav>
       <ul>
-        <li><a href="about.html">Why GCI</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">WHY GCI</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO WITH CAROUSEL -->
+  <section class="home-hero">
 
     <div class="hero-carousel">
-      <img src="assets/img/MorganMedical.JPG" class="carousel-image active" alt="">
-      <img src="assets/img/Farmview.JPG" class="carousel-image" alt="">
+      <img src="assets/img/hero1.jpg" class="carousel-image active">
+      <img src="assets/img/hero2.jpg" class="carousel-image">
+      <img src="assets/img/hero3.jpg" class="carousel-image">
     </div>
 
-    <h1 class="hero-tagline-main">Built on Better Planning</h1>
-    <h2 class="hero-tagline-sub">Where feasibility, optimization, and engineering work as one.</h2>
- <a href="about.html" class="cta-button">Learn More</a>
+    <h1 class="hero-tagline-main">Georgia Civil</h1>
+    <p class="hero-tagline-sub">Built on Better Planning</p>
+
+    <a href="portfolio.html" class="cta-button">View Our Work</a>
   </section>
 
   <!-- FOOTER -->
   <footer class="gc-footer">
     <div class="gc-footer-inner">
-
       <div class="gc-footer-left">
-        <img src="assets/img/download.png" alt="">
-        <img src="assets/img/SecondaryLogoGCI.png" alt="">
+        <img src="assets/img/logo.png" alt="Logo">
       </div>
 
       <div class="gc-footer-right">
         <p class="gc-footer-location">MADISON, GA</p>
         <p class="gc-footer-services">CIVIL ENGINEERING · LANDSCAPE ARCHITECTURE · LAND SURVEYING</p>
       </div>
-
     </div>
   </footer>
 
-  <!-- CAROUSEL SCRIPT -->
-  <script>
-    const slides = document.querySelectorAll('.carousel-image');
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000);
-  </script>
-
+  <script src="assets/js/carousel.js"></script>
 </body>
 </html>
+
+
+
 
 
 
