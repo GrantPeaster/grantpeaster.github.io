@@ -8,3 +8,4 @@ function rotateImages() {
 }
 
 setInterval(rotateImages, 4000);
+
