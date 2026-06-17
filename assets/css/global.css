@@ -41,7 +41,16 @@ body {
 .header-logo {
   height: 32px;
   width: auto;
+  object-fit: contain;
 }
+
+.header-logo-secondary {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
 
 nav ul {
   display: flex;
@@ -159,10 +168,18 @@ nav ul li a:hover {
   align-items: center;
 }
 
+.gc-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .gc-footer-left img {
   height: 26px;
   width: auto;
+  object-fit: contain;
 }
+
 
 .gc-footer-right {
   text-transform: uppercase;
