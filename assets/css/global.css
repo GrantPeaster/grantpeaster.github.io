@@ -153,11 +153,11 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   FOOTER
+   FOOTER — SMALLER VERSION
    ========================================= */
 .gc-footer {
   background: var(--gc-blue);
-  padding: 24px 32px;
+  padding: 12px 24px;        /* smaller padding */
 }
 
 .gc-footer-inner {
@@ -166,36 +166,32 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.gc-footer-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 16px;                 /* tighter spacing */
 }
 
 .gc-footer-left img {
-  height: 26px;
+  height: 20px;              /* smaller logos */
   width: auto;
   object-fit: contain;
 }
 
-
 .gc-footer-right {
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;    /* slightly tighter */
   font-family: var(--font-nav);
+  line-height: 1.2;          /* reduces vertical height */
 }
 
 .gc-footer-location {
-  font-size: 0.75rem;
-  margin-bottom: 4px;
+  font-size: 0.65rem;        /* smaller text */
+  margin-bottom: 2px;
 }
 
 .gc-footer-services {
-  font-size: 0.7rem;
+  font-size: 0.6rem;         /* smaller text */
   color: var(--gc-brass);
 }
+
 
 /* =========================================
    MOBILE
