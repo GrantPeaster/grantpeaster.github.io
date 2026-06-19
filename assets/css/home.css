@@ -116,9 +116,11 @@
 }
 
 /* Front + Back shared */
-.gci-flip-front,
+.gci-flip-front {
+  position: relative;
+}
 .gci-flip-back {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 6px;
@@ -183,6 +185,25 @@
 
 .gci-card-list li {
   margin-bottom: 6px;
+}
+/* Title label on front + back */
+.gci-flip-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin: 0;
+  padding: 6px 12px;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: var(--gc-white);
+  text-shadow:
+    -1px -1px 0 var(--gc-brass),
+     1px -1px 0 var(--gc-brass),
+    -1px  1px 0 var(--gc-brass),
+     1px  1px 0 var(--gc-brass);
+  z-index: 3;
+  pointer-events: none; /* prevents hover glitch */
 }
 
 /* MOBILE */
