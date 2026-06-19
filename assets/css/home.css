@@ -176,35 +176,18 @@
 /* Bulleted list on card back */
 .gci-card-list {
   list-style-type: disc;
-  padding-left: 22px;
-  margin: 0;
+  padding-left: 24px;
+  margin-top: 80px;
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .gci-card-list li {
   margin-bottom: 6px;
 }
 /* Title label on front + back */
-.gci-flip-label {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  margin: 0;
-  padding: 6px 12px;
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  letter-spacing: 0.05em;
-  color: var(--gc-white);
-  text-shadow:
-    -1px -1px 0 var(--gc-brass),
-     1px -1px 0 var(--gc-brass),
-    -1px  1px 0 var(--gc-brass),
-     1px  1px 0 var(--gc-brass);
-  z-index: 3;
-  pointer-events: none; /* prevents hover glitch */
-}
+
 
 /* MOBILE */
 @media (max-width: 900px) {
@@ -216,7 +199,26 @@
   .gci-flip-card {
     height: 300px;
   }
+/* Title label on front + back */
+.gci-flip-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin: 0;
+  padding: 4px 10px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--gc-white);
+  text-shadow:
+    -2px -2px 0 var(--gc-brass),
+     2px -2px 0 var(--gc-brass),
+    -2px  2px 0 var(--gc-brass),
+     2px  2px 0 var(--gc-brass);
+  z-index: 3;
+  pointer-events: none;
 }
+
 
 /* =========================================
    MOBILE RESPONSIVE
