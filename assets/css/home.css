@@ -118,6 +118,7 @@
 /* Front + Back shared */
 .gci-flip-front {
   position: relative;
+  backface-visibility: hidden;
 }
 .gci-flip-back {
   position: relative;
@@ -140,7 +141,6 @@
   bottom: 0;
   width: 100%;
   padding: 16px;
-  background: rgba(0,0,0,0.45);
   color: var(--gc-white);
   font-family: var(--font-heading);
   font-size: 1.6rem;
@@ -150,15 +150,14 @@
 
 /* BACK SIDE */
 .gci-flip-back {
+  position: relative;
   background: var(--gc-blue);
   color: var(--gc-white);
   transform: rotateY(180deg);
-  display: flex;
+  backface-visibility: hidden;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex;
   padding: 24px;
-  text-align: center;
   border: 1px solid var(--gc-brass);
 }
 
@@ -166,7 +165,7 @@
   font-family: var(--font-heading);
   font-size: 1.8rem;
   margin-bottom: 12px;
-  color: var(--gc-brass);
+  color: var(--gc-white);
 }
 
 .gci-flip-back p {
