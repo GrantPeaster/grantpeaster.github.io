@@ -171,6 +171,19 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+/* Bulleted list on card back */
+.gci-card-list {
+  list-style-type: disc;
+  padding-left: 22px;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.gci-card-list li {
+  margin-bottom: 6px;
+}
 
 /* MOBILE */
 @media (max-width: 900px) {
