@@ -107,7 +107,7 @@
 .gci-flip-inner {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.8s ease;
@@ -121,7 +121,7 @@
 /* Front + Back shared */
 .gci-flip-front,
 .gci-flip-back {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 6px;
